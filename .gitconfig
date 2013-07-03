@@ -1,0 +1,6 @@
+[user]
+	name = Junichi ICHIKAWA
+	email = j1.ichikawa@gmail.com
+[core]
+	autocrlf = true
+	excludesfile = C:\\Users\\000287\\Documents\\gitignore_global.txt
