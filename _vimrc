@@ -3,7 +3,7 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 26-Jun-2013.
+" Last Change: 01-Aug-2013.
 " Maintainer:  MURAOKA Taro <koron@tka.att.ne.jp>
 "
 " 解説:
@@ -82,6 +82,7 @@ endif
 "  "silent! set keymap=japanese
 "  "set iminsert=0 imsearch=0
 "endif
+
 "" 非GUI日本語コンソールを使っている場合の設定
 "if !has('gui_running') && &encoding != 'cp932' && &term == 'win32'
 "  set termencoding=cp932
@@ -216,12 +217,12 @@ let format_allow_over_tw = 1	" ぶら下り可能幅
 " 行番号を非表示 (number:表示)
 set number
 " ルーラーを表示 (noruler:非表示)
+" カーソルが何行目の何列目に置かれているかを表示する
 set ruler
 " タブや改行を表示 (list:表示)
 "set nolist
 set list
 " どの文字でタブや改行を表示するかを設定
-"set listchars=tab:>-,extends:<,trail:-,eol:<
 "set listchars=tab:>-,extends:<,trail:-,eol:<
 set listchars=tab:>-
 " 長い行を折り返して表示 (nowrap:折り返さない)
@@ -229,8 +230,15 @@ set wrap
 " 常にステータス行を表示 (詳細は:he laststatus)
 set laststatus=2
 " statuslineのファイルの情報表示設定
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 "set statusline=%<%f\ %m\ %r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=\ (%v,%l)/%L%8P\ 
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+"ステータスラインに文字コードと改行文字を表示する
+"set statusline+=[%n][TYPE=%Y]\[FORMAT=%{&ff}]\[ENC=%{&fileencoding}]%m%r%w%{expand('%:p:t')}\%<\(%{SnipMid(expand('%:p:h'),80-len(expand('%:p:t')),'...')}\)
+
+" Right StatusLine
+"set statusline+=%=\ %=[%{GetB()}]" Get Hex
+"set statusline+=%{g:HahHah()}" HahHah plugin
+"set updatetime=500
 
 " コマンドラインの高さ (Windows用gvim使用時はgvimrcを編集すること)
 set cmdheight=2
@@ -299,8 +307,8 @@ endif
 :let g:Align_xstrlen = 3
 
 "Use grep in Windows
-
-set grepprg=grep\ -nH
+"set grepprg=grep\ -nH
+set grepprg=ack\ -a
 
 "-------------------------------------------------------------------------------
 " netrw の有効化
@@ -338,4 +346,20 @@ let g:surround_71 = "_(\"\r\")" " 71 = G
 
 "-------------------------------------------------------------------------------
 ":set noswapfile
-"
+
+" use for Align plugin
+set nocp
+
+" Alignを日本語環境で使用するための設定
+:let g:Align_xstrlen = 3
+
+"-------------------------------------------------------------------------------
+" ctrip configs
+let g:ctrlp_use_migemo = 1
+let g:ctrlp_clear_cache_on_exit = 0   " 終了時キャッシュをクリアしない
+let g:ctrlp_mruf_max            = 500 " MRUの最大記録数
+let g:ctrlp_open_new_file       = 1   " 新規ファイル作成時にタブで開く
+
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+
+
