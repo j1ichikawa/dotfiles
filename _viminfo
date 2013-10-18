@@ -1,4 +1,4 @@
-# ‚±‚Ì viminfo ƒtƒ@ƒCƒ‹‚Í Vim 7.3 ‚É‚æ‚Á‚Ä¶¬‚³‚ê‚Ü‚µ‚½.
+# ‚±‚Ì viminfo ƒtƒ@ƒCƒ‹‚Í Vim 7.4 ‚É‚æ‚Á‚Ä¶¬‚³‚ê‚Ü‚µ‚½.
 # •ÏX‚·‚éÛ‚É‚Í\•ª’ˆÓ‚µ‚Ä‚­‚¾‚³‚¢!
 
 # ‚±‚Ìƒtƒ@ƒCƒ‹‚ª‘‚©‚ê‚½‚Ì 'encoding' ‚Ì’l
@@ -8,64 +8,69 @@
 # hlsearch on (H) or off (h):
 ~h
 # ÅŒã‚Ì ŒŸõƒpƒ^[ƒ“:
-~MSle0~/ó‹µ_d“ü
+~MSle0~/^AND 
 
 # ÅŒã‚Ì Substitute ŒŸõƒpƒ^[ƒ“:
-~MSle0& 
+~MSle0& \( *\);
 
 # ÅŒã‚É’uŠ·‚³‚ê‚½•¶š—ñ:
-$
+$@
 
 # ƒRƒ}ƒ“ƒhƒ‰ƒCƒ“ €–Ú‚Ì—š—ğ (V‚µ‚¢‚à‚Ì‚©‚çŒÃ‚¢‚à‚Ì‚Ö):
+:wq!
+:wq
 :w
+:%s/^AND /AND\t/g
+:%s/^ON /ON\t/g
+:w ~\Documents\sql\KNH907_E-01.sql
+:tabe
 :q
+:Ack KNH907
+:cd c:\Work\TFS\FoodCORE_KNH\02_Online\FoodCORE\sql-define\xml\sql\
+:r! today
+:!r today
+:q!
+:e ~\Documents\sql\
+:%s/ƒ}ƒXƒ^[/ƒ}ƒXƒ^/gc
+:%s/ƒpƒ‰ƒ[ƒ^/ƒpƒ‰ƒƒ^/gc
+:noh
+:s/\t/\r/g
 :cn
 :.cc
-:Ack GetDempyoShoshikiAjax
-:cd $STDIR
-:quit
-:Ack 20130731_debug.cs
-:pwd
-:Ack ó‹µ_d“ü
-:vimgrep /ó‹µ_d“ü/gj ./* | cw
-:e .
-:cd Facade\
-:cd ..\Fes500_e\
-:cd ..
-:cd c:\Work\FoodCOREPT\App_Code\Fhu021_u\
-:noh
-:q!
-:e $PTDIR/fhu021_u
-:tabe
 
 # ŒŸõ•¶š—ñ €–Ú‚Ì—š—ğ (V‚µ‚¢‚à‚Ì‚©‚çŒÃ‚¢‚à‚Ì‚Ö):
-? \<GetDempyoShoshikiAjax\>
-?/ó‹µ_d“ü
-?/’ ‡æ
-?/kkkkkkkkkkk
-?/fes500
-?/\t
-? \t\t*$
-?  
-? \<fes610_e\>
-? \<fkh100_e\>
-? 100
-?/fkh200
-?/FKH200
-? \<fkh200\>
-?/fkh100
-?/FHU020
-?/“üŒÉ—\’è“ú
-?/Ack Nyko_yoteibi
-?/“üŒÉ—\’è“ú\|Nyuko_yoteibi\|Nyuko_yoteibi_ajax
-?/“üŒÉ—\’è“ú\|Nyuko_yoteibi\|Nyuko_yoteibi_ajax
+? 
+? ^AND 
+? ^ON 
+?/^ON
+?/FROM
+?/fbm00[12]_e
+? \<fbm002_e\>
+?/fbm001
+? \<JUSHINSHAMEI\>
+?/fmt
+?/FBM001
+? \<PARAM_NAME\>
+? \<PARAM_SECTION\>
+? \<SEGMENT\>
+? \<COMMENTS\>
+? \<PARAM_VALUE\>
+? \<TOROKU_TM\>
+? \<TOROKU_TAMMATSU\>
+? \<HENKO_TM\>
+? \<HENKO_TAMMATSU\>
 
 # ® €–Ú‚Ì—š—ğ (V‚µ‚¢‚à‚Ì‚©‚çŒÃ‚¢‚à‚Ì‚Ö):
 
 # “ü—Ís €–Ú‚Ì—š—ğ (V‚µ‚¢‚à‚Ì‚©‚çŒÃ‚¢‚à‚Ì‚Ö):
+@C:/commands/get_dep_files.cmd
+@[{y(es)},n(o),a(ll),q(uit)] 
+@]
+@[{y(es)},n(o),a(ll),q(uit)] y
+@[{y(es)},n(o),a(ll),q(uit)] yes
+@C:/Users/000287/Documents/sql/F_JISSAIGENKA.fmt
 @:q
 @"
-@[{y(es)},n(o),a(ll),q(uit)] y
 @~/
 @<
 @[
@@ -75,25 +80,26 @@ $
 
 # ƒŒƒWƒXƒ^:
 "0	LINE	0
-	robocopy %STDIR%\App_Code\FC\ %PTDIR%\App_Code\FC\ /E /MT
-""1	LINE	0
-	$/FoodCORE_ST/02_Online/FoodCORE/App_Code/Entity
+	ORDER BY
+		M.HOKANSAKI_CD ASC
+"1	LINE	0
+	
 "2	LINE	0
 	
-"3	CHAR	0
-	FC
-"4	CHAR	0
-	FC
+"3	LINE	0
+	V_TANAOROSHI_NYURYOKU.TANAOROSHI_SAI_ATSUKAI_HOHO_NYURYOKU
+"4	LINE	0
+	AND	M.TNOROS_SAI_ATSUKAI_HOHO_NYRYK
 "5	LINE	0
-	C:/Work/FoodCOREPT/App_Code/Fes500_e/Facade
+	AND	M.TNOROS_SAI_ATSUKAI_HOHO_NYRYK = V_TANAOROSHI_NYURYOKU.TANAOROSHI_SAI_ATSUKAI_HOHO_NYURYOKU
 "6	LINE	0
-	C:/Work/FoodCOREPT/App_Code/Fes500_e/Facade
+	V_TANAOROSHI_NYURYOKU.KAISHA_CD
 "7	LINE	0
-	C:/Work/FoodCOREPT/App_Code/Fhu021_u/Facade
+	ON	M.KAISHA_CD
 "8	LINE	0
-	C:/Work/FoodCOREPT/App_Code/Fhu021_u
+	ON	M.KAISHA_CD = V_TANAOROSHI_NYURYOKU.KAISHA_CD
 "9	LINE	0
-	c:/Work/FoodCOREPT/fes610_e/js
+	M_TOROKU_BUSHO.BUSHO_CD
 "a@	CHAR	0
 	ysiw'
 "b	CHAR	0
@@ -105,13 +111,13 @@ $
 "g	CHAR	0
 	nhv0x
 "h	CHAR	0
-	aasz€ıc€ıb€ıc€ıbuuuuuuuuuggjjjVjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjkkkkkjjjjjjjjjjjjjjjjjjjjjkkkkkkkkkkkkkkkkkkjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjkkkkkkkkkkkkkkjuu
+	aasz€yc€yb€yc€ybuuuuuuuuuggjjjVjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjkkkkkjjjjjjjjjjjjjjjjjjjjjkkkkkkkkkkkkkkkkkkjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjkkkkkkkkkkkkkkjuu
 "j	CHAR	0
 	kDjD
 "k	CHAR	0
 	k
 "l	CHAR	0
-	:q:tabe:e sql/FES4	:w€kbq€ı,€ı.:e:e!gt:e!@jgt€ı,€ı-€ı-€ı-€ı-€ı-€ı-€ı-€ı-€ı-€ı,€ı.€ıc€ıbG@@@j
+	:q:tabe:e sql/FES4	:w€kbq€y,€y.:e:e!gt:e!@jgt€y,€y-€y-€y-€y-€y-€y-€y-€y-€y-€y,€y.€yc€ybG@@@j
 "m	CHAR	0
 	hv0x
 "n	CHAR	0
@@ -131,1804 +137,1614 @@ $
 "z	CHAR	0
 	jyss'
 "-	CHAR	0
-	FC
+	--
 
 # ƒtƒ@ƒCƒ‹ƒ}[ƒN:
 'A  75  23  C:\Work\2010_03\100309\Lecture_for_New_SQL_User\create_user_for_CIBA_User.sql
-'0  9  0  C:\commands\get_dependency_files.cmd
-'1  2448  2  C:\Work\FoodCOREPT\App_Code\Fes500_e\Facade\Fes500e1Facade.cs
-'2  619  26  c:\Work\FoodCOREPT\App_Code\Fes610_e\Facade\Fes610e1Facade.cs
-'3  1588  9  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
-'4  237  0  C:\Work\FoodCOREPT\App_Code\Fhu021_u\Facade\Fhu020u1Facade.cs
-'5  1  0  C:\Tools\KeywordHilight\JavaScript\readme.txt
-'6  87  0  c:\vim\vim74b\README.txt
-'7  11  52  ~\Documents\20130730_debug.cs
-'8  83  0  c:\Work\FoodCOREPT\fam271_e\fam271e1.aspx
-'9  1  0  ~\Documents\20130727_debug.cs
+'0  4  13  C:\Work\TFS\FoodCORE_KNH\02_Online\FoodCORE\sql-define\xml\sql\knh\KNH907_E.xml
+'1  1  9  c:\Work\FoodCOREPT\App_Code\Fbm002_e\files.sh
+'2  2  37  c:\Work\FoodCOREPT\App_Code\Fbm002_e\dirs.sh
+'3  6  0  c:\Work\FoodCOREPT\fbm002_e\files.sh
+'4  452  0  C:\Work\FoodCOREPT\sql-define\xml\sql\edi\EDI100_D.xml
+'5  1  0  ~\Documents\201307161713451d7aef10-14c3-4e68-a8a_log.txt
+'6  1  0  ~\Documents\SEK100X1_201307161713451d7aef10-14c3-4e68-a8a.log
+'7  58  25  c:\Work\FoodCOREPT\xo000p01\xo000f01.aspx
+'8  37  0  ~\Documents\20131015_debug.cs
+'9  145  0  ~\Documents\20131011_debug.cs
 
 # ƒWƒƒƒ“ƒvƒŠƒXƒg (V‚µ‚¢‚à‚Ì‚ªæ):
--'  9  0  C:\commands\get_dependency_files.cmd
--'  4  50  C:\commands\get_dependency_files.cmd
--'  10  0  C:\commands\get_dependency_files.cmd
--'  2448  2  C:\Work\FoodCOREPT\App_Code\Fes500_e\Facade\Fes500e1Facade.cs
--'  2379  59  C:\Work\FoodCOREPT\App_Code\Fes500_e\Facade\Fes500e1Facade.cs
--'  13  0  C:\Work\FoodCOREPT\App_Code\Fes500_e\Facade
--'  299  12  C:\Work\FoodCOREPT\App_Code\Fhu021_u\Facade\Fhu020u1Facade.cs
--'  11  0  C:\Work\FoodCOREPT\App_Code\Fhu021_u\Facade\
--'  1  0  C:\Work\FoodCOREPT\App_Code\Fhu021_u
--'  619  26  c:\Work\FoodCOREPT\App_Code\Fes610_e\Facade\Fes610e1Facade.cs
--'  1  0  c:\Work\FoodCOREPT\App_Code\Fes610_e\Facade\Fes610e1Facade.cs
--'  13  0  c:\Work\FoodCOREPT\App_Code\Fes610_e\Facade
--'  219  30  c:\Work\TFS\FoodCORE_ST\02_Online\FoodCORE\fes610_e\fes610e1.aspx
--'  1  0  c:\Work\TFS\FoodCORE_ST\02_Online\FoodCORE\fes610_e\fes610e1.aspx
--'  17  0  c:\Work\TFS\FoodCORE_ST\02_Online\FoodCORE\fes610_e\
--'  1  0  c:\Work\FoodCOREPT
--'  101  6  c:\Work\FoodCOREPT\App_Code\Fej100_e\Facade\Fej100d1Facade.cs
--'  98  23  c:\Work\FoodCOREPT\App_Code\Fej100_e\Facade\Fej100d1Facade.cs
--'  250  24  c:\Work\FoodCOREPT\App_Code\Fej100_e\DontEdit\Formvo\Baseform\Fej100d1BaseForm.cs
--'  71  27  c:\Work\FoodCOREPT\fkh100_e\fkh100d1.aspx
--'  68  75  c:\Work\FoodCOREPT\fkh100_e\fkh100d1.aspx
--'  1  0  c:\Work\FoodCOREPT\fkh100_e\fkh100d1.aspx
--'  1169  3  c:\Work\FoodCOREPT\App_Code\Fes500_e\Facade\Fes500e1\Fes500e1Facade_Btntoroku_frm.cs
--'  45  15  c:\Work\FoodCOREPT\App_Code\Fes500_e\Facade\Fes500e1\Fes500e1Facade_Btnkakutei_gnxt.cs
--'  13  0  c:\Work\FoodCOREPT\App_Code\Fes500_e\Facade\Fes500e1
--'  5510  15  C:\Work\FoodCOREPT\App_Code\Fes500_e\Facade\Fes500e1Facade.cs
--'  5614  5  C:\Work\FoodCOREPT\App_Code\Fes500_e\Facade\Fes500e1Facade.cs
--'  5603  0  C:\Work\FoodCOREPT\App_Code\Fes500_e\Facade\Fes500e1Facade.cs
--'  5587  63  C:\Work\FoodCOREPT\App_Code\Fes500_e\Facade\Fes500e1Facade.cs
--'  13  0  c:\Work\FoodCOREPT\App_code\fes500_e\Facade\
--'  1588  9  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  1586  9  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  1534  30  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  1406  9  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  1404  9  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  1352  30  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  1227  9  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  1225  9  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  1173  30  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  1044  9  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  1042  9  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  990  30  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  861  9  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  859  9  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  807  30  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  696  9  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  694  9  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  642  30  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  532  9  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  530  9  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  478  30  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  374  11  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  372  11  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  232  7  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  230  7  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  169  13  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  39  0  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  1  0  c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
--'  237  0  C:\Work\FoodCOREPT\App_Code\Fhu021_u\Facade\Fhu020u1Facade.cs
--'  244  8  C:\Work\FoodCOREPT\App_Code\Fhu021_u\Facade\Fhu020u1Facade.cs
--'  370  16  C:\Work\FoodCOREPT\App_Code\Fhu021_u\Facade\Fhu020u1Facade.cs
--'  92  26  c:\Work\FoodCOREPT\App_Code\Fhu021_u\Facade\Fhu020u1\Fhu020u1Facade_Btnjikko_frm.cs
--'  91  59  c:\Work\FoodCOREPT\App_Code\Fhu021_u\Facade\Fhu020u1\Fhu020u1Facade_Btnjikko_frm.cs
--'  30  47  c:\Work\FoodCOREPT\App_Code\DontEdit\StoredInfo\StoredInfoProcSakuseiFHU020u010.cs
--'  23  1  c:\Work\FoodCOREPT\App_Code\DontEdit\StoredInfo\StoredInfoProcSakuseiFHU020u010.cs
--'  14  37  c:\Work\FoodCOREPT\App_Code\Fhu021_u\Facade\Fhu020u1\Fhu020u1Facade_Btnjikko_frm.cs
--'  83  21  c:\Work\FoodCOREPT\App_Code\Fhu021_u\Facade\Fhu020u1\Fhu020u1Facade_Btnjikko_frm.cs
--'  1  0  C:\Tools\KeywordHilight\JavaScript\readme.txt
--'  87  0  c:\vim\vim74b\README.txt
--'  1  0  c:\vim\vim74b\README.txt
--'  11  52  ~\Documents\20130730_debug.cs
--'  39  0  ~\Documents\20130730_debug.cs
--'  9  0  ~\Documents\20130730_debug.cs
--'  32  27  ~\Documents\20130730_debug.cs
--'  27  0  ~\Documents\20130730_debug.cs
--'  36  0  ~\Documents\20130730_debug.cs
--'  18  21  ~\Documents\20130730_debug.cs
--'  77  24  ~\Documents\20130730_debug.cs
--'  50  0  ~\Documents\20130730_debug.cs
--'  47  12  ~\Documents\20130730_debug.cs
--'  101  0  ~\Documents\20130730_debug.cs
--'  74  38  ~\Documents\20130730_debug.cs
--'  70  0  ~\Documents\20130730_debug.cs
--'  52  0  ~\Documents\20130730_debug.cs
--'  81  0  ~\Documents\20130730_debug.cs
--'  93  0  ~\Documents\20130730_debug.cs
--'  66  0  ~\Documents\20130730_debug.cs
--'  65  0  ~\Documents\20130730_debug.cs
--'  68  0  ~\Documents\20130730_debug.cs
--'  94  0  ~\Documents\20130730_debug.cs
--'  95  0  ~\Documents\20130730_debug.cs
--'  73  21  ~\Documents\20130730_debug.cs
--'  59  42  ~\Documents\20130730_debug.cs
--'  100  0  ~\Documents\20130730_debug.cs
--'  105  0  ~\Documents\20130730_debug.cs
--'  109  0  ~\Documents\20130730_debug.cs
--'  108  0  ~\Documents\20130730_debug.cs
--'  104  0  ~\Documents\20130730_debug.cs
+-'  4  13  C:\Work\TFS\FoodCORE_KNH\02_Online\FoodCORE\sql-define\xml\sql\knh\KNH907_E.xml
+-'  174  0  C:\Work\TFS\FoodCORE_KNH\02_Online\FoodCORE\sql-define\xml\sql\knh\KNH907_E.xml
+-'  7  0  C:\Work\TFS\FoodCORE_KNH\02_Online\FoodCORE\sql-define\xml\sql\knh\KNH907_E.xml
+-'  150  0  C:\Work\TFS\FoodCORE_KNH\02_Online\FoodCORE\sql-define\xml\sql\knh\KNH907_E.xml
+-'  1  9  c:\Work\FoodCOREPT\App_Code\Fbm002_e\files.sh
+-'  20  27  c:\Work\FoodCOREPT\App_Code\Fbm002_e\files.sh
+-'  4  37  c:\Work\FoodCOREPT\App_Code\Fbm002_e\files.sh
+-'  2  0  c:\Work\FoodCOREPT\App_Code\Fbm002_e\files.sh
+-'  6  22  c:\Work\FoodCOREPT\App_Code\Fbm002_e\files.sh
+-'  13  0  c:\Work\FoodCOREPT\App_Code\Fbm002_e\files.sh
+-'  2  37  c:\Work\FoodCOREPT\App_Code\Fbm002_e\dirs.sh
+-'  1  4  c:\Work\FoodCOREPT\App_Code\Fbm002_e\dirs.sh
+-'  6  0  c:\Work\FoodCOREPT\fbm002_e\files.sh
+-'  8  0  c:\Work\FoodCOREPT\fbm002_e\files.sh
+-'  1  0  c:\Work\FoodCOREPT\fbm002_e\files.sh
+-'  452  0  C:\Work\FoodCOREPT\sql-define\xml\sql\edi\EDI100_D.xml
+-'  138  11  C:\Work\FoodCOREPT\sql-define\xml\sql\edi\EDI001_D.xml
+-'  6675  0  C:\Work\FoodCOREPT\sql-define\xml\sql\commonAjax.xml
+-'  52  10  C:\Work\FoodCOREPT\sql-define\xml\sql\fbm\FBM001_E.xml
+-'  496  0  C:\Work\FoodCOREPT\sql-define\xml\sql\edi\EDI100_D.xml
+-'  464  20  C:\Work\FoodCOREPT\sql-define\xml\sql\edi\EDI100_D.xml
+-'  37  10  C:\Work\FoodCOREPT\sql-define\xml\sql\fbm\FBM001_E.xml
+-'  505  36  C:\Work\FoodCOREPT\sql-define\xml\sql\edi\EDI100_D.xml
+-'  151  11  C:\Work\FoodCOREPT\sql-define\xml\sql\edi\EDI001_D.xml
+-'  6674  0  C:\Work\FoodCOREPT\sql-define\xml\sql\commonAjax.xml
+-'  6681  20  C:\Work\FoodCOREPT\sql-define\xml\sql\commonAjax.xml
+-'  1  0  C:\Work\FoodCOREPT\sql-define\xml\sql
+-'  8  0  C:\Work\FoodCOREPT\sql-define\xml
+-'  1  0  ~\Documents\201307161713451d7aef10-14c3-4e68-a8a_log.txt
+-'  1  0  ~\Documents\SEK100X1_201307161713451d7aef10-14c3-4e68-a8a.log
+-'  58  25  c:\Work\FoodCOREPT\xo000p01\xo000f01.aspx
+-'  1  0  c:\Work\FoodCOREPT\xo000p01\xo000f01.aspx
+-'  83  5  ~\Documents\20131011_debug.cs
+-'  92  0  ~\Documents\20131011_debug.cs
+-'  38  0  ~\Documents
+-'  1  0  ~\Documents
+-'  114  0  ~\Documents\20131016_debug.cs
+-'  46  29  ~\Documents\20131016_debug.cs
+-'  71  35  ~\Documents\20131016_debug.cs
+-'  1  0  ~\Documents\20131016_debug.cs
+-'  37  0  ~\Documents\20131015_debug.cs
+-'  33  60  ~\Documents\20131015_debug.cs
+-'  187  49  ~\Documents\20131015_debug.cs
+-'  184  0  ~\Documents\20131015_debug.cs
+-'  105  0  ~\Documents\20131015_debug.cs
+-'  110  0  ~\Documents\20131015_debug.cs
+-'  125  47  ~\Documents\20131015_debug.cs
+-'  75  54  ~\Documents\20131015_debug.cs
+-'  185  47  ~\Documents\20131015_debug.cs
+-'  126  31  ~\Documents\20131015_debug.cs
+-'  104  1  ~\Documents\20131015_debug.cs
+-'  100  1  ~\Documents\20131015_debug.cs
+-'  41  11  ~\Documents\20131015_debug.cs
+-'  61  1  ~\Documents\20131015_debug.cs
+-'  32  71  ~\Documents\20131015_debug.cs
+-'  40  1  ~\Documents\20131015_debug.cs
+-'  94  73  ~\Documents\20131015_debug.cs
+-'  278  16  ~\Documents\20131015_debug.cs
+-'  276  0  ~\Documents\20131015_debug.cs
+-'  23  0  ~\Documents\20131015_debug.cs
+-'  97  32  ~\Documents\20131015_debug.cs
+-'  28  0  ~\Documents\20131015_debug.cs
+-'  87  0  ~\Documents\20131015_debug.cs
+-'  96  0  ~\Documents\20131015_debug.cs
+-'  95  0  ~\Documents\20131015_debug.cs
+-'  91  0  ~\Documents\20131015_debug.cs
+-'  90  0  ~\Documents\20131015_debug.cs
+-'  89  0  ~\Documents\20131015_debug.cs
+-'  88  0  ~\Documents\20131015_debug.cs
+-'  85  0  ~\Documents\20131015_debug.cs
+-'  86  0  ~\Documents\20131015_debug.cs
+-'  83  0  ~\Documents\20131015_debug.cs
+-'  137  0  ~\Documents\20131015_debug.cs
+-'  164  0  ~\Documents\20131015_debug.cs
+-'  183  0  ~\Documents\20131015_debug.cs
+-'  111  15  ~\Documents\20131015_debug.cs
+-'  107  0  ~\Documents\20131015_debug.cs
+-'  175  0  ~\Documents\20131015_debug.cs
+-'  182  0  ~\Documents\20131015_debug.cs
+-'  169  8  ~\Documents\20131015_debug.cs
+-'  174  0  ~\Documents\20131015_debug.cs
+-'  168  0  ~\Documents\20131015_debug.cs
+-'  252  0  ~\Documents\20131015_debug.cs
+-'  243  0  ~\Documents\20131015_debug.cs
+-'  229  0  ~\Documents\20131015_debug.cs
+-'  221  8  ~\Documents\20131015_debug.cs
+-'  222  0  ~\Documents\20131015_debug.cs
+-'  284  0  ~\Documents\20131015_debug.cs
+-'  250  0  ~\Documents\20131015_debug.cs
+-'  282  0  ~\Documents\20131015_debug.cs
+-'  208  0  ~\Documents\20131015_debug.cs
+-'  206  0  ~\Documents\20131015_debug.cs
+-'  203  12  ~\Documents\20131015_debug.cs
+-'  199  0  ~\Documents\20131015_debug.cs
+-'  201  0  ~\Documents\20131015_debug.cs
 
 # ƒtƒ@ƒCƒ‹“àƒ}[ƒN‚Ì—š—ğ (V‚µ‚¢‚à‚Ì‚©‚çŒÃ‚¢‚à‚Ì):
 
-> C:\commands\get_dependency_files.cmd
-	"	9	0
-	^	4	57
-	.	10	0
-	+	6	0
-	+	6	0
-	+	1	41
-	+	3	28
-	+	3	29
-	+	6	0
-	+	3	56
-	+	10	0
-	+	10	26
-	+	10	0
-	+	10	0
-	+	2	0
-	+	5	0
-	+	4	0
-	+	10	0
-	+	10	0
-	+	4	51
-	+	10	0
+> C:\Work\TFS\FoodCORE_KNH\02_Online\FoodCORE\sql-define\xml\sql\knh\KNH907_E.xml
+	"	4	13
 
-> C:\Work\TFS\FoodCORE_ST\02_Online\FoodCORE\Ajax\GetDempyoShoshikiAjax.aspx
-	"	1	59
+> ~\Documents\20131017_debug.cs
+	"	28	0
+	^	29	53
+	.	29	53
+	+	2	12
+	+	33	0
+	+	31	0
+	+	32	0
+	+	21	0
+	+	22	0
+	+	22	0
+	+	30	0
+	+	23	36
+	+	25	7
+	+	26	0
+	+	28	50
+	+	29	0
+	+	27	0
+	+	29	53
 
-> C:\Work\TFS\FoodCORE_ST\02_Online\FoodCORE\Ajax\GetDempyoShoshikiAjax.aspx.cs
-	"	57	29
-
-> C:\Work\TFS\FoodCORE_ST\02_Online\FoodCORE\App_Code\FC\BizCommon\Util\uDenEnt.cs
-	"	5675	34
-
-> C:\Work\TFS\FoodCORE_ST\02_Online\FoodCORE\App_Code\Fej100_e\Facade\Fej100e1Facade.cs
-	"	1175	40
-
-> C:\Work\TFS\FoodCORE_ST\02_Online\FoodCORE\fej100_e\js\ajax.js
-	"	1653	9
-
-> C:\Work\TFS\FoodCORE_ST\02_Online\FoodCORE\fes500_e\js\ajax.js
-	"	1173	36
-
-> C:\Work\FoodCOREPT\App_Code\Fhu021_u\Facade\Fhu020u1Facade.cs
-	"	299	12
-
-> C:\Work\FoodCOREPT\App_Code\Fes500_e\Facade\Fes500e1Facade.cs
-	"	2448	2
-	^	3216	6
-	.	3254	33
-	+	2478	78
-	+	2479	40
-	+	2481	0
-	+	2481	5
-	+	2481	115
-	+	2492	0
-	+	2492	95
-	+	2492	16
-	+	2481	164
-	+	2480	4
-	+	2481	0
-	+	2480	125
-	+	2491	56
-	+	2492	0
-	+	2494	30
-	+	2502	0
-	+	2494	47
-	+	2497	0
-	+	1373	0
-	+	2751	0
-	+	2816	0
-	+	2730	0
-	+	2779	0
-	+	2857	0
-	+	3131	0
-	+	3143	0
-	+	3155	0
-	+	3170	0
-	+	3182	0
-	+	3194	0
-	+	3227	0
-	+	3227	0
-	+	3228	0
-	+	3227	33
-	+	3264	0
-	+	3247	28
-	+	3246	30
-	+	3246	0
-	+	3248	0
-	+	3246	37
-	+	3246	0
-	+	3246	0
-	+	3266	0
-	+	3247	38
-	+	3265	0
-	+	3247	43
-	+	3265	43
-	+	3215	0
-	+	3246	0
-	+	3215	0
-	+	3217	0
-	+	3215	11
-	+	3246	11
-	+	3254	0
-	+	3263	0
-	+	3255	8
-	+	3257	0
-	+	3260	0
-	+	3261	0
-	+	3260	107
-	+	3258	52
-	+	3257	37
-	+	3266	0
-	+	3217	0
-	+	3246	0
-	+	3215	0
-	+	3217	5
-	+	3218	5
-	+	3219	5
-	+	3220	5
-	+	3221	5
-	+	3222	5
-	+	3223	5
-	+	3224	5
-	+	3225	5
-	+	3226	5
-	+	3227	5
-	+	3228	5
-	+	3229	5
-	+	3230	5
-	+	3231	5
-	+	3232	5
-	+	3233	5
-	+	3234	5
-	+	3235	5
-	+	3236	5
-	+	3237	5
-	+	3238	5
-	+	3239	5
-	+	3240	5
-	+	3241	5
-	+	3242	5
-	+	3243	5
-	+	3244	5
-	+	3245	5
-	+	3246	0
-	+	3247	0
-	+	3215	0
-	+	3216	6
-	+	3254	33
-
-> ~\Documents\20130731_debug.cs
-	"	56	0
-	^	21	0
-	.	56	0
-	+	106	0
-	+	107	0
-	+	132	19
-	+	106	0
-	+	106	0
-	+	104	0
-	+	108	0
-	+	112	0
-	+	92	0
+> ~\Documents\20131016_EDI_ParmMstMt.md
+	"	58	14
+	^	29	96
+	.	81	1
 	+	50	0
 	+	51	0
-	+	89	0
 	+	52	0
-	+	52	8
-	+	54	46
-	+	52	14
-	+	52	2
-	+	52	7
-	+	54	0
 	+	53	0
-	+	88	7
-	+	89	50
-	+	90	53
-	+	89	0
-	+	59	0
-	+	57	0
-	+	60	0
-	+	61	10
-	+	61	24
-	+	61	43
-	+	61	0
-	+	87	0
-	+	63	20
-	+	65	0
-	+	65	96
-	+	66	0
-	+	67	92
-	+	63	0
-	+	76	0
-	+	70	0
-	+	86	0
-	+	77	0
-	+	77	302
-	+	78	56
-	+	80	304
-	+	81	56
-	+	83	311
-	+	84	56
+	+	54	0
 	+	55	0
-	+	49	0
+	+	56	0
+	+	57	0
+	+	58	0
+	+	59	0
+	+	62	3
+	+	63	0
+	+	63	11
+	+	63	10
+	+	62	8
+	+	63	11
+	+	139	0
+	+	63	20
+	+	64	16
+	+	64	17
+	+	139	0
+	+	62	0
+	+	65	17
+	+	64	29
+	+	66	23
+	+	139	0
+	+	67	9
+	+	67	12
+	+	139	0
+	+	67	13
+	+	68	0
+	+	67	15
+	+	139	0
+	+	68	19
+	+	68	19
+	+	69	0
+	+	67	22
+	+	68	27
+	+	70	0
+	+	69	12
+	+	69	12
+	+	70	0
+	+	69	18
+	+	139	0
+	+	70	18
+	+	70	17
+	+	139	0
+	+	71	0
+	+	67	0
+	+	62	0
+	+	62	0
 	+	38	0
-	+	64	0
-	+	49	2
-	+	49	16
-	+	49	0
-	+	49	7
-	+	49	0
-	+	49	66
-	+	49	0
-	+	40	0
-	+	48	0
-	+	46	30
-	+	45	0
-	+	49	0
-	+	38	0
+	+	65	18
+	+	66	20
+	+	72	0
+	+	77	39
+	+	71	0
+	+	104	1
+	+	139	0
+	+	110	0
+	+	80	43
+	+	79	49
+	+	106	0
+	+	13	0
 	+	27	0
 	+	28	0
-	+	28	8
-	+	28	7
+	+	27	0
+	+	81	3
+	+	82	0
+	+	138	0
+	+	111	0
+	+	112	0
+	+	116	23
+	+	118	23
+	+	120	23
+	+	128	23
+	+	129	23
+	+	130	23
+	+	128	23
+	+	129	23
+	+	130	23
+	+	128	23
+	+	129	23
+	+	130	23
+	+	5	0
+	+	5	0
+	+	6	16
+	+	4	0
+	+	5	1
+	+	5	1
+	+	4	0
+	+	3	0
+	+	2	0
+	+	5	0
+	+	4	1
+	+	30	0
+	+	29	35
+	+	30	37
+	+	29	94
+	+	81	1
+
+> ~\Documents\sql\M_BIZ_PARAM.fmt
+	"	3	44
+
+> C:\Work\FoodCOREPT\App_Code\Qqoutput\Code\VO\Cod_edikigyocdVO.cs
+	"	37	25
+
+> C:\Work\FoodCOREPT\edi100_d\js\edi100d1_event_n.js
+	"	108	14
+
+> C:\Work\FoodCOREPT\qqoutput\form\js\edi220u1_c_n.js
+	"	17	15
+
+> C:\Work\FoodCOREPT\sql-define\xml\sql\edi\EDI110_D.xml
+	"	16	38
+
+> C:\Work\FoodCOREPT\sql-define\xml\sql\edi\EDI120_D.xml
+	"	16	38
+
+> C:\Work\FoodCOREPT\sql-define\xml\sql\edi\EDI130_D.xml
+	"	16	38
+
+> C:\Work\FoodCOREPT\sql-define\xml\sql\edi\EDI140_D.xml
+	"	16	38
+
+> C:\Work\FoodCOREPT\fbm002_e\css\fbm002e1.css
+	"	2	17
+	.	2	15
+	+	2	15
+
+> C:\Work\FoodCOREPT\fbm002_e\fbm002_eInit.aspx
+	"	20	16
+	.	20	14
+	+	1	36
+	+	1	131
+	+	6	3
+	+	20	14
+
+> C:\Work\FoodCOREPT\fbm002_e\fbm002_eInit.aspx.cs
+	"	75	5
+	.	75	36
+	+	3	6
+	+	22	34
+	+	23	34
+	+	37	38
+	+	40	8
+	+	44	25
+	+	64	33
+	+	75	36
+
+> C:\Work\FoodCOREPT\fbm002_e\fbm002e1.aspx
+	"	46	48
+	.	46	107
+	+	5	3
+	+	12	127
+	+	27	77
+	+	33	61
+	+	36	67
+	+	38	37
+	+	41	15
+	+	46	107
+
+> C:\Work\FoodCOREPT\fbm002_e\fbm002e1.aspx.cs
+	"	770	22
+	.	960	49
+	+	3	6
+	+	19	34
+	+	20	34
+	+	45	34
+	+	51	38
+	+	54	8
+	+	58	25
+	+	65	9
+	+	88	53
+	+	98	39
+	+	180	11
+	+	194	31
+	+	275	11
+	+	289	31
+	+	309	46
+	+	312	29
+	+	357	11
+	+	385	46
+	+	386	109
+	+	387	29
+	+	433	25
+	+	494	52
+	+	497	34
+	+	503	26
+	+	506	20
+	+	522	22
+	+	523	48
+	+	526	25
+	+	580	22
+	+	585	19
+	+	591	19
+	+	593	20
+	+	602	22
+	+	607	19
+	+	613	22
+	+	621	40
+	+	623	37
+	+	627	37
+	+	629	37
+	+	631	37
+	+	633	37
+	+	635	37
+	+	637	37
+	+	639	37
+	+	641	37
+	+	643	37
+	+	645	37
+	+	686	22
+	+	687	45
+	+	689	40
+	+	690	40
+	+	691	32
+	+	700	22
+	+	705	19
+	+	758	65
+	+	767	44
+	+	768	34
+	+	770	66
+	+	801	52
+	+	959	55
+	+	960	49
+	+	309	0
+	+	960	49
+
+> C:\Work\FoodCOREPT\fbm002_e\js\fbm002e1_event_n.js
+	"	205	9
+	.	205	12
+	+	11	15
+	+	44	4
+	+	205	12
+
+> C:\Work\FoodCOREPT\App_Code\Fbm002_e\DontEdit\Formvo\Fbm002_ePgForm.cs
+	"	94	9
+	.	94	26
+	+	3	6
+	+	15	38
+	+	18	8
+	+	21	17
+	+	32	14
+	+	34	26
+	+	40	9
+	+	42	25
+	+	46	19
+	+	50	12
+	+	60	12
+	+	62	25
+	+	75	25
+	+	77	19
+	+	92	25
+	+	94	26
+
+> C:\Work\FoodCOREPT\App_Code\Fbm002_e\DontEdit\Request\Fbm002e1RequestHelper.cs
+	"	310	35
+	.	264	0
+	+	3	6
+	+	15	34
+	+	28	38
+	+	31	8
+	+	33	24
+	+	54	29
+	+	122	29
+	+	171	29
+	+	184	40
+	+	188	8
+	+	192	0
+	+	196	0
+	+	200	0
+	+	204	0
+	+	208	0
+	+	212	0
+	+	216	0
+	+	220	0
+	+	224	0
+	+	228	0
+	+	244	0
+	+	257	0
+	+	264	0
+
+> C:\Work\FoodCOREPT\App_Code\Fbm002_e\Facade\Fbm002e1\Fbm002e1Facade_Btnmeisai_tsuika_madd.cs
+	"	89	27
+	.	89	0
+	+	3	0
+	+	57	0
+	+	58	0
+	+	62	0
+	+	63	0
+	+	65	0
+	+	70	0
+	+	71	0
+	+	84	0
+	+	85	0
+	+	87	0
+	+	89	0
+
+> C:\Work\FoodCOREPT\App_Code\Fbm002_e\Facade\Fbm002e1\Fbm002e1Facade_Btntoroku_frm.cs
+	"	115	70
+	.	115	68
+	+	3	6
+	+	14	34
+	+	35	34
+	+	39	38
+	+	42	8
+	+	45	25
+	+	76	48
+	+	77	38
+	+	80	62
+	+	89	28
+	+	115	91
+	+	138	28
+	+	158	28
+	+	277	43
+	+	279	44
+	+	281	34
+	+	317	46
+	+	325	44
+	+	357	36
+	+	395	37
+	+	430	53
+	+	115	68
+
+> C:\Work\FoodCOREPT\App_Code\Fbm002_e\Facade\Fbm002e1\Fbm002e1Facade_Pgr_pgn.cs
+	"	57	3
+	.	57	0
+	+	3	6
+	+	14	34
+	+	34	38
+	+	37	8
+	+	40	25
+	+	56	35
+	+	57	0
+
+> C:\Work\FoodCOREPT\App_Code\Fbm002_e\Facade\Fbm002e1Facade.cs
+	"	268	70
+	.	268	68
+	+	3	6
+	+	14	34
+	+	34	34
+	+	38	38
+	+	41	8
+	+	44	25
+	+	50	34
+	+	54	36
+	+	61	12
+	+	67	13
+	+	69	9
+	+	87	48
+	+	132	44
+	+	137	84
+	+	144	79
+	+	153	44
+	+	158	55
+	+	219	39
+	+	232	79
+	+	259	74
+	+	261	44
+	+	268	51
+	+	137	101
+	+	144	60
+	+	232	60
+	+	259	107
+	+	268	68
+
+> C:\Work\FoodCOREPT\App_Code\Fbm002_e\Constant\Fbm001_eConstant.cs
+	"	62	41
+	.	62	39
+	+	3	6
+	+	11	38
+	+	14	8
+	+	16	24
+	+	23	64
+	+	37	41
+	+	41	50
+	+	44	41
+	+	48	41
+	+	53	57
+	+	56	15
+	+	58	39
+	+	60	15
+	+	62	39
+
+> C:\Work\FoodCOREPT\App_Code\Fbm002_e\DontEdit\Formvo\Baseform\Fbm002e1BaseForm.cs
+	"	134	25
+	.	134	23
+	+	3	6
+	+	19	38
+	+	22	8
+	+	25	17
+	+	49	12
+	+	124	23
+	+	134	23
+
+> C:\Work\FoodCOREPT\App_Code\Fbm002_e\DontEdit\Formvo\Baseform\Fbm002e1M1BaseForm.cs
+	"	401	25
+	.	401	23
+	+	3	6
+	+	17	38
+	+	20	8
+	+	23	17
+	+	281	12
+	+	295	6
+	+	296	17
+	+	298	18
+	+	356	65
+	+	391	0
+	+	401	23
+
+> C:\Work\FoodCOREPT\App_Code\Fbm002_e\DontEdit\Formvo\Fbm002e1Form.cs
+	"	47	53
+	.	47	67
+	+	3	6
+	+	13	34
+	+	15	38
+	+	18	8
+	+	21	32
+	+	34	12
+	+	47	67
+
+> C:\Work\FoodCOREPT\App_Code\Fbm002_e\DontEdit\Formvo\Fbm002e1M1Form.cs
+	"	31	14
+	.	31	12
+	+	3	6
+	+	10	34
+	+	12	38
+	+	15	8
+	+	18	34
+	+	31	12
+
+> C:\Work\FoodCOREPT\App_Code\Fbm002_e\Facade\Fbm002e1\Fbm002e1Facade_Btnclear_frm.cs
+	"	40	22
+	.	40	0
+	+	3	6
+	+	14	34
+	+	34	38
+	+	37	8
+	+	40	0
+
+> C:\Work\FoodCOREPT\App_Code\Fbm002_e\Request\Fbm002e1\Fbm002e1Request_Btnclear_frm.cs
+	"	37	10
+	.	37	0
+	+	3	6
+	+	11	34
+	+	22	55
+	+	25	8
+	+	27	51
+	+	32	62
+	+	37	0
+
+> C:\Work\FoodCOREPT\App_Code\Fbm002_e\Request\Fbm002e1\Fbm002e1Request_Btnmeisai_tsuika_madd.cs
+	"	119	3
+	.	119	6
+	+	3	6
+	+	11	34
+	+	22	55
+	+	25	8
+	+	27	59
+	+	32	70
+	+	37	13
+	+	90	29
+	+	93	6
+	+	116	29
+	+	119	6
+
+> C:\Work\FoodCOREPT\App_Code\Fbm002_e\Request\Fbm002e1\Fbm002e1Request_Btntoroku_frm.cs
+	"	37	10
+	.	37	13
+	+	3	6
+	+	11	34
+	+	22	55
+	+	25	8
+	+	27	52
+	+	32	63
+	+	37	13
+
+> C:\Work\FoodCOREPT\App_Code\Fbm002_e\Request\Fbm002e1\Fbm002e1Request_Pgr_pgn.cs
+	"	119	3
+	.	119	6
+	+	3	6
+	+	11	34
+	+	22	55
+	+	25	8
+	+	27	46
+	+	32	57
+	+	37	13
+	+	90	29
+	+	93	6
+	+	116	29
+	+	119	6
+
+> C:\Work\FoodCOREPT\App_Code\Fbm002_e\Request\Fbm002e1Request.cs
+	"	84	3
+	.	11	0
+	+	3	6
+	+	11	34
+	+	20	38
+	+	23	8
+	+	25	26
+	+	34	6
+	+	43	6
+	+	52	6
+	+	61	6
+	+	79	27
+	+	82	6
+	+	84	6
+	+	11	0
+
+> C:\Work\FoodCOREPT\App_Code\Fbm002_e\VO\Fbm002e1FormCondition.cs
+	"	41	9
+	.	41	12
+	+	3	6
+	+	14	38
+	+	17	8
+	+	20	17
+	+	41	12
+
+> C:\Work\FoodCOREPT\App_Code\Fbm002_e\VO\Fbm002e1M1ResultVO.cs
+	"	330	49
+	.	330	65
+	+	3	6
+	+	14	38
+	+	17	8
+	+	21	17
+	+	255	12
+	+	269	6
+	+	270	17
+	+	272	18
+	+	330	65
+
+> C:\Work\FoodCOREPT\App_Code\Fbm002_e\VO\Fbm002e1ResultVO.cs
+	"	40	9
+	.	40	12
+	+	3	6
+	+	16	38
+	+	19	8
+	+	22	17
+	+	40	12
+
+> C:\Work\FoodCOREPT\fbm001_e\fbm001e1.aspx.cs
+	"	3	3
+
+> C:\Work\FoodCOREPT\fbm002_e\mapping\Fbm002e1entity.xml
+	"	8	43
+	.	8	41
+	+	8	41
+
+> C:\Work\FoodCOREPT\fbm002_e\mapping\Fbm002e1form.xml
+	"	8	43
+	.	8	41
+	+	8	41
+
+> c:\Work\FoodCOREPT\App_Code\Fbm002_e\files.sh
+	"	1	9
+	^	1	10
+	.	1	9
+	+	2	0
+	+	13	0
+	+	2	0
+	+	2	49
+	+	3	51
+	+	4	36
+	+	5	38
+	+	6	38
+	+	7	46
+	+	8	29
+	+	9	51
+	+	10	60
+	+	11	52
+	+	12	46
+	+	13	31
+	+	14	53
+	+	15	62
+	+	16	54
+	+	17	48
+	+	18	32
+	+	19	29
+	+	20	27
+	+	3	51
+	+	4	36
+	+	5	38
+	+	6	38
+	+	7	46
+	+	8	29
+	+	9	51
+	+	10	60
+	+	11	52
+	+	12	46
+	+	13	31
+	+	14	53
+	+	15	62
+	+	16	54
+	+	17	48
+	+	18	32
+	+	19	29
+	+	20	27
+	+	21	0
+	+	1	9
+
+> c:\Work\FoodCOREPT\App_Code\Fbm002_e\dirs.sh
+	"	2	37
+	^	2	3
+	.	2	35
+	+	1	0
+	+	2	0
+	+	3	0
+	+	1	20
+	+	2	21
+	+	1	2
+	+	2	2
+	+	2	21
+	+	3	0
+	+	1	35
+	+	2	35
+
+> c:\Work\FoodCOREPT\fbm002_e\files.sh
+	"	6	0
+	.	6	0
+	+	1	0
+	+	2	0
+	+	3	0
+	+	4	0
+	+	5	0
+	+	6	0
+	+	6	0
+	+	7	0
+	+	8	0
+	+	1	31
+	+	2	24
+	+	3	27
+	+	4	28
+	+	5	31
+	+	6	36
+	+	7	45
+	+	8	43
+	+	6	0
+
+> C:\Work\FoodCOREPT\sql-define\xml\sql\commonAjax.xml
+	"	6675	0
+	^	6543	4
+	.	6543	3
+	+	6513	0
+	+	6527	0
+	+	6513	0
+	+	6515	0
+	+	6514	0
+	+	6515	64
+	+	6515	94
+	+	6519	0
+	+	6515	0
+	+	6520	0
+	+	6519	0
+	+	6522	0
+	+	6521	0
+	+	6523	2
+	+	6524	3
+	+	6525	5
+	+	6526	0
+	+	6535	3
+	+	6543	3
+
+> C:\Work\FoodCOREPT\sql-define\xml\sql\edi\EDI001_D.xml
+	"	138	11
+
+> C:\Work\FoodCOREPT\sql-define\xml\sql\edi\EDI100_D.xml
+	"	452	0
+
+> C:\Work\FoodCOREPT\sql-define\xml\sql\fbm\FBM001_E.xml
+	"	52	10
+
+> ~\Documents\201307161713451d7aef10-14c3-4e68-a8a_log.txt
+	"	1	0
+
+> ~\Documents\SEK100X1_201307161713451d7aef10-14c3-4e68-a8a.log
+	"	1	0
+
+> ~\Documents\20131016_debug.cs
+	"	1	0
+	^	35	0
+	.	35	0
+	+	2	12
+	+	209	52
+	+	272	0
+	+	297	0
+	+	299	15
+	+	308	0
+	+	307	4
+	+	306	39
+	+	85	0
+	+	87	0
+	+	89	0
+	+	85	14
+	+	87	14
+	+	89	14
+	+	85	0
+	+	87	0
+	+	89	0
+	+	85	0
+	+	87	0
+	+	89	0
+	+	82	26
+	+	98	1
 	+	35	0
+
+> ~\Documents\20131011_debug.cs
+	"	83	5
+	^	83	6
+	.	83	5
+	+	2	12
+	+	251	0
+	+	250	0
+	+	249	0
+	+	250	2
+	+	251	2
+	+	252	24
+	+	253	0
+	+	253	0
+	+	250	21
+	+	229	0
+	+	230	0
+	+	154	0
+	+	144	34
+	+	143	11
+	+	144	0
+	+	145	18
+	+	151	1
+	+	152	0
+	+	146	19
+	+	152	31
+	+	151	28
+	+	145	30
+	+	146	33
+	+	146	0
+	+	146	18
+	+	148	0
+	+	125	0
+	+	134	0
+	+	105	0
+	+	118	0
+	+	113	1
+	+	118	0
+	+	255	0
+	+	255	0
+	+	147	19
+	+	153	28
+	+	147	30
+	+	81	2
+	+	88	2
+	+	89	2
+	+	90	2
+	+	92	5
+	+	83	5
+
+> c:\Work\FoodCOREPT\xo000p01\xo000f01.aspx
+	"	58	25
+	^	58	23
+	.	58	25
+	+	58	25
+
+> c:\Work\FoodCOREKNH\xo000p01\xo000f01.aspx
+	"	56	0
+	^	58	33
+	.	58	25
+	+	58	40
+	+	27	0
+	+	28	0
 	+	29	0
 	+	30	0
-	+	32	28
-	+	30	89
-	+	36	0
-	+	38	0
-	+	33	0
-	+	25	0
-	+	26	0
-	+	27	0
-	+	38	0
-	+	27	0
-	+	38	0
-	+	37	0
-	+	27	0
-	+	38	0
-	+	16	0
-	+	25	0
-	+	15	0
-	+	18	2
-	+	18	0
-	+	23	0
-	+	19	0
-	+	20	0
-	+	22	28
-	+	20	89
-	+	24	0
-	+	25	0
-	+	35	0
-	+	56	0
-
-> C:\Work\FoodCOREPT\xo000p01\xo000f01.aspx
-	"	59	32
-	^	59	33
-	.	59	32
-	+	60	23
-	+	38	0
-	+	46	0
-	+	47	0
-	+	64	0
-	+	63	0
-	+	65	7
-	+	76	0
-	+	66	0
-	+	75	12
-	+	69	0
-	+	77	0
-	+	84	12
-	+	86	0
-	+	93	12
-	+	95	0
-	+	102	12
-	+	104	0
-	+	113	0
-	+	122	0
-	+	131	0
-	+	140	0
-	+	140	0
-	+	140	0
-	+	149	0
-	+	153	0
-	+	46	0
-	+	47	0
-	+	63	0
-	+	141	0
-	+	60	27
-	+	1	0
-	+	37	0
-	+	45	0
-	+	46	0
-	+	62	0
+	+	31	0
+	+	32	0
+	+	73	0
+	+	82	0
+	+	91	0
+	+	100	0
+	+	109	0
+	+	118	0
+	+	127	0
+	+	135	0
 	+	136	0
+	+	139	0
+	+	139	0
+	+	139	0
+	+	139	0
+	+	139	0
+	+	139	0
 	+	140	0
-	+	59	32
+	+	154	0
+	+	158	0
+	+	159	0
+	+	164	0
+	+	139	0
+	+	58	0
+	+	58	25
+	+	59	25
+	+	58	25
 
-> c:\Work\FoodCOREPT\fhu021_u\fhu020u1.aspx
-	"	1	0
+> C:\Work\FoodCOREPT\fbm001_e\fbm001e1.aspx
+	"	116	0
+	^	121	0
+	.	116	0
+	+	1	43
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	5
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	9
+	+	1	10
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	119
+	+	1	0
+	+	1	72
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	3
+	+	1	3
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	3
+	+	1	3
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	1
+	+	1	2
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	0
+	+	1	11
+	+	1	0
+	+	1	53
+	+	1	57
+	+	1	0
+	+	1	15
+	+	1	14
+	+	1	89
+	+	1	113
+	+	169	0
+	+	187	0
+	+	178	0
+	+	99	0
+	+	89	0
+	+	89	0
+	+	94	0
+	+	187	0
+	+	169	0
+	+	187	0
+	+	89	0
+	+	99	0
+	+	187	0
+	+	220	0
+	+	121	0
+	+	99	0
+	+	116	0
 
-> C:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FBN500u700_PROC.sql
-	"	1	0
+> C:\Work\FoodCOREKNH\App_Code\Knh201_e\Facade\Knh201e1Facade.cs
+	"	5049	0
+	^	1742	6
+	.	48	0
+	+	270	0
+	+	266	0
+	+	1790	0
+	+	4159	0
+	+	4163	0
+	+	4223	0
+	+	48	0
+	+	3578	0
+	+	3578	0
+	+	337	0
+	+	1743	0
+	+	1742	5
+	+	48	0
 
-> C:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU021u040_PROC.sql
-	"	1693	26
-
-> C:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU021u050_PROC.sql
-	"	1	0
-
-> C:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU023u040_PROC.sql
-	"	1	0
-
-> C:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU210u030_PROC.sql
-	"	1	0
-
-> C:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU210u031_PROC.sql
-	"	1	0
-
-> C:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU500u051_PROC.sql
-	"	1	0
-
-> C:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU500u052_PROC.sql
-	"	1	0
-
-> C:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU500u053_PROC.sql
-	"	1	0
-
-> C:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FKU300u010_PROCš.sql
-	"	1	0
-
-> C:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FKU300u011_PROCš.sql
-	"	1	0
-
-> C:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FKU320u010_PROCš.sql
-	"	1	0
-
-> C:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FKU320u011_PROCš.sql
-	"	1	0
-
-> C:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u030_PROC.sql
-	"	1	0
-
-> C:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u010_PROC.sql
-	"	302	7
-
-> C:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u010_SUB1.sql
-	"	1	0
-
-> C:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u010_SUB2.sql
-	"	1	0
-
-> C:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u010_SUB3.sql
-	"	1	0
-
-> C:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u020_PROC.sql
-	"	1	0
-
-> C:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u021_PROC.sql
-	"	1	0
-
-> C:\Work\TFS\FoodCORE_ST\03_Batch\FcBatch\StoredProcSakuseiFHU020u100\StoredMainProcSakuseiFHU020u100.cs
-	"	204	0
-
-> C:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020 y¿‹€”õz
-	"	1	0
-
-> C:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\ControlP
-	"	1	0
+> C:\Work\FoodCOREKNH\App_Code\Knh201_e\Facade\ControlP
+	"	5	0
 	.	2	0
-	+	1	0
-	+	1	0
+	+	20	0
+	+	11	0
 	+	2	0
 
-> C:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FBN100u020_PROC.sql
-	"	1	0
+> C:\Work\FoodCOREKNH\App_Code\Knh201_e\Facade\Knh201e1\Knh201e1Facade_Btntoroku_frm.cs
+	"	170	1
+	^	46	57
+	.	116	23
+	+	41	0
+	+	144	0
+	+	197	0
+	+	116	23
+	+	46	39
+	+	116	23
 
-> c:\Work\FoodCOREPT\App_Code\Fes500_e\Facade\Fes500e1\Fes500e1Facade_Btnkakutei_gnxt.cs
-	"	45	15
+> C:\Work\FoodCOREKNH\log\quiqplus_sql.log
+	"	23062	28
+	.	1	0
+	+	1252	0
+	+	2074	63
+	+	2075	60
+	+	2077	59
+	+	2078	61
+	+	2080	58
+	+	2081	60
+	+	1	0
 
-> c:\Work\FoodCOREPT\App_Code\Fes500_e\Facade\Fes500e1\Fes500e1Facade_Btntoroku_frm.cs
-	"	1169	3
-	^	3356	0
-	.	3356	0
-	+	190	0
-	+	189	21
-	+	190	71
-	+	189	167
-	+	1202	0
-	+	3356	0
+> C:\Work\FoodCOREKNH\log\ControlP
+	"	2	0
+	.	2	0
+	+	14	0
+	+	11	0
+	+	9	0
+	+	6	0
+	+	4	0
+	+	2	0
 
-> c:\Work\FoodCOREPT\App_Code\Fes500_e\Facade\ControlP
+> C:\Work\FoodCOREKNH\log\FoodCORE.log
+	"	2172	87
+	.	1	0
+	+	1	0
+	k	842	0
+
+> C:\Work\FoodCOREKNH\log\quiqplus.log
+	"	598	220
+	.	1	0
+	+	1	0
+
+> C:\Work\FoodCOREKNH\log\fileLogger.log
 	"	1	0
 	.	1	0
 	+	1	0
+
+> C:\Work\FoodCOREKNH\accordion-define\xml\wfx003l1.xml
+	"	1	0
+
+> c:\Work\FoodCOREKNH\knh201_e\knh201e1.aspx.cs
+	"	884	5
+	.	884	0
+	+	56	0
+	+	884	0
+	+	902	0
+	+	884	0
+
+> c:\Work\FoodCOREPT\fkh100_e\fkh100e1.aspx.cs
+	"	849	0
+	.	56	0
+	+	56	0
+
+> C:\Work\FoodCOREKNH\App_Code\Program\Fkh100_eManager.cs
+	"	50	37
+
+> C:\Work\TFS\FoodCORE_KNH\02_Online\FoodCORE\qqoutput\form\js\knh201d1_c_n.js
+	"	570	1
+
+> c:\Work\FoodCOREKNH\qqoutput\form\js\knh201d1_c_n.js
+	"	570	1
+
+> C:\Work\TFS\FoodCORE_KNH\02_Online\FoodCORE\knh201_e\knh201d1.aspx
+	"	600	0
+
+> c:\Work\FoodCOREKNH\knh201_e\knh201d1.aspx
+	"	600	0
+
+> c:\Work\FoodCOREPT\qqoutput\form\js\fkh100d1_c_n.js
+	"	547	1
 
 > c:\Work\FoodCOREPT\fkh100_e\fkh100d1.aspx
-	"	71	27
+	"	579	0
 
-> c:\Work\FoodCOREPT\App_Code\Fej100_e\DontEdit\Formvo\Baseform\Fej100d1BaseForm.cs
-	"	250	24
+> c:\Work\FoodCOREPT\App_GlobalResources\form\fkh100d1.aspx.ja-JP.resx
+	"	314	4
 
-> c:\Work\FoodCOREPT\App_Code\Fej100_e\Facade\Fej100d1Facade.cs
-	"	102	6
+> c:\Work\FoodCOREKNH\App_GlobalResources\form\knh201d1.aspx.ja-JP.resx
+	"	323	4
 
-> c:\Work\FoodCOREPT\App_Code\Fkh100_e\Facade\Fkh100d1Facade.cs
-	"	83	4
-	^	115	71
-	.	111	0
-	+	98	0
-	+	101	0
-	+	97	39
-	+	100	0
-	+	115	0
-	+	114	6
-	+	111	0
-	+	111	0
-	+	115	69
-	+	111	0
+> C:\Work\FoodCOREKNH\accordion-define\accordion-define.xml
+	"	1	0
 
-> c:\Work\FoodCOREPT\App_Code\Fkh200_e\Facade\Fkh200d1Facade.cs
-	"	99	18
-	^	99	17
-	.	1444	0
-	+	101	0
-	+	95	0
-	+	120	0
-	+	98	0
-	+	99	5
-	+	156	0
-	+	377	0
-	+	379	0
-	+	389	0
-	+	401	0
-	+	402	0
-	+	407	0
-	+	658	0
-	+	662	0
-	+	685	0
-	+	705	0
-	+	721	0
-	+	731	0
-	+	741	0
-	+	742	0
-	+	732	0
-	+	746	0
-	+	752	0
-	+	753	0
-	+	792	0
-	+	793	0
-	+	782	0
-	+	808	0
-	+	844	0
-	+	966	0
-	+	986	0
-	+	1002	0
-	+	1012	0
-	+	1013	0
-	+	1022	0
-	+	1023	0
-	+	1034	0
-	+	1035	0
-	+	1064	0
-	+	1074	0
-	+	1125	0
-	+	1440	0
-	+	1444	0
-
-> c:\Work\TFS\FoodCORE_ST\02_Online\FoodCORE\fes610_e\fes610e1.aspx
-	"	219	30
-
-> c:\Work\FoodCOREPT\App_Code\Fes610_e\Facade\Fes610e1Facade.cs
-	"	619	26
-
-> c:\Work\FoodCOREPT\App_Code\Fes610_e\Facade\ControlP
-	"	10	0
-	.	2	0
-	+	1	0
-	+	2	0
-
-> c:\Work\FoodCOREPT\fes610_e\js\fes610e1_event_n.js
-	"	446	42
-
-> c:\Work\FoodCOREPT\App_Code\Fes610_e\Facade\Fes610e1\Fes610e1Facade_Btnsakujo_frm.cs
-	"	420	45
-
-> c:\Work\Export_FES610E1\dep_files.cmd
-	"	22	27
-	^	10	4
+> ~\ControlP
+	"	1	0
 	.	1	0
 	+	1	0
-	+	5	0
-	+	1	0
-	+	3	0
-	+	5	0
-	+	5	0
-	+	5	0
-	+	7	0
-	+	5	0
-	+	7	0
-	+	8	0
-	+	5	0
-	+	10	0
-	+	9	4
-	+	10	3
-	+	11	0
-	+	1	0
-	+	3	0
-	+	5	0
-	+	7	0
-	+	1	0
-
-> c:\Work\FoodCOREPT\App_Code\FC\BizCommon\Util\uDenEnt.cs
-	"	5493	16
-
-> c:\Work\TFS\FoodCORE_ST\03_Batch\T-SQL\100_“úŸEŒŸ\FHU020u110_PROC.sql
-	"	1588	9
-
-> c:\Work\FoodCOREPT\App_Code\Fhu021_u\Facade\Fhu020u1\Fhu020u1Facade_Btnjikko_frm.cs
-	"	14	37
-
-> c:\Work\FoodCOREPT\App_Code\DontEdit\StoredInfo\StoredInfoProcSakuseiFHU020u010.cs
-	"	30	47
-
-> C:\vim\vim74b\README.txt
-	"	115	0
-
-> C:\vim\vim74b\mswin.vim
-	"	1	0
-
-> C:\Tools\KeywordHilight\JavaScript\readme.txt
-	"	1	0
-
-> ~\Documents\20130730_debug.cs
-	"	11	52
-	^	14	62
-	.	8	0
-	+	58	0
-	+	61	24
-	+	97	55
-	+	62	17
-	+	106	0
-	+	104	0
-	+	108	0
-	+	109	0
-	+	107	12
-	+	103	5
-	+	105	0
-	+	103	12
-	+	101	0
-	+	100	0
-	+	111	3
-	+	112	0
-	+	110	0
-	+	113	0
-	+	59	26
-	+	61	8
-	+	59	24
-	+	60	0
-	+	73	93
-	+	73	93
-	+	96	0
-	+	73	93
-	+	74	38
-	+	74	6
-	+	74	6
-	+	95	0
-	+	74	20
-	+	93	0
-	+	68	0
-	+	67	0
-	+	69	0
-	+	64	0
-	+	65	24
-	+	66	0
-	+	70	0
-	+	70	18
-	+	71	0
-	+	70	19
-	+	85	0
-	+	85	0
-	+	83	0
-	+	85	0
-	+	82	0
-	+	76	0
-	+	55	0
-	+	57	12
-	+	56	0
-	+	46	0
-	+	45	0
-	+	70	30
-	+	51	75
-	+	46	77
-	+	52	18
-	+	46	49
-	+	60	0
-	+	46	107
-	+	47	0
-	+	47	62
-	+	47	0
-	+	49	0
-	+	47	50
-	+	48	0
-	+	49	66
-	+	39	0
-	+	55	27
-	+	18	0
-	+	18	0
-	+	18	3
-	+	18	8
-	+	18	7
-	+	19	0
-	+	18	0
-	+	18	8
-	+	18	6
-	+	18	7
-	+	19	0
-	+	36	0
-	+	20	0
-	+	22	0
-	+	20	0
-	+	28	0
-	+	26	0
-	+	29	64
-	+	36	0
-	+	27	0
-	+	36	0
-	+	31	51
-	+	32	53
-	+	36	0
-	+	34	65
-	+	35	0
-	+	34	20
-	+	35	28
-	+	24	0
-	+	9	0
-	+	8	0
-
-> C:\Work\FoodCOREPT\App_Code\Fhu021_u\Facade\ControlP
-	"	1	0
-	.	2	0
 	+	1	0
 	+	1	0
-	+	2	0
-
-> ~\Documents\info_tfs.txt
-	"	1	0
-
-> ~\Documents\DebugFlow.txt
-	"	75	0
-
-> C:\Work\FoodCOREPT\config\RunLicense_WEBCS.config
-	"	1	0
-
-> C:\Work\FoodCOREPT\config\logsettings.config
-	"	82	0
-
-> C:\Work\FoodCOREPT\App_Code\Fes500_e\Facade\Fes500e1\ControlP
-	"	1	0
-	.	2	0
 	+	1	0
-	+	2	0
+	+	1	0
+	+	1	0
+	+	1	0
 
-> C:\Work\FoodCOREPT\fes500_e\fes500e1.aspx
-	"	364	27
-	^	738	15
-	.	1377	100
-	+	81	12
-	+	76	12
-	+	99	12
-	+	119	12
-	+	137	12
-	+	145	12
-	+	155	12
-	+	167	12
-	+	185	10
-	+	191	12
-	+	201	12
-	+	213	12
-	+	222	11
-	+	227	12
-	+	245	12
-	+	285	12
-	+	331	12
-	+	341	12
-	+	360	12
-	+	368	12
-	+	380	12
-	+	394	12
-	+	427	12
-	+	435	12
-	+	449	12
-	+	462	12
-	+	463	12
-	+	464	12
-	+	465	12
-	+	476	12
-	+	477	12
-	+	478	12
-	+	479	12
-	+	653	0
-	+	654	0
-	+	665	0
-	+	665	0
-	+	730	12
-	+	731	12
-	+	733	0
-	+	734	13
-	+	735	14
-	+	736	14
-	+	737	14
-	+	738	0
-	+	1377	100
-
-> C:\Work\FoodCOREPT\fes500_e\fes500d1.aspx
-	"	181	75
-	^	792	126
-	.	775	90
-	+	784	123
-	+	792	125
-	+	784	123
-	+	792	124
-	+	479	0
-	+	792	124
-	+	775	90
-
-> C:\Work\FoodCOREPT\App_Code\Fes500_e\Facade\Fes500e1\sql
+> c:\Work\TFS\FoodCORE_KNH\02_Online\FoodCORE\knh201_e\knh201e1.aspx.cs
 	"	1	0
 
-> ~\Documents\sql\FES500_E.xml
-	"	786	58
-	^	129	0
-	.	129	0
-	+	1099	0
-	+	1102	0
-	+	1101	0
-	+	1104	0
-	+	1103	0
-	+	1105	3
-	+	1106	9
-	+	1108	2
-	+	1110	3
-	+	1112	0
-	+	1109	0
-	+	1107	0
-	+	1121	0
-	+	1128	0
-	+	1162	0
-	+	1167	0
-	+	1208	0
-	+	1167	0
-	+	1169	0
-	+	1170	0
-	+	1200	0
-	+	1202	0
-	+	1201	0
-	+	1204	0
-	+	1203	0
-	+	1205	3
-	+	1207	0
-	+	1216	0
-	+	1224	0
-	+	1232	0
-	+	1243	0
-	+	1248	0
-	+	1289	0
-	+	1248	0
-	+	1250	0
-	+	1263	10
-	+	1265	2
-	+	1268	9
-	+	1271	3
-	+	1274	2
-	+	1277	9
-	+	1279	2
-	+	1262	0
-	+	1264	0
-	+	1266	0
-	+	1267	3
-	+	1269	0
-	+	1270	2
-	+	1271	3
-	+	1272	9
-	+	1273	0
-	+	1275	0
-	+	1276	3
-	+	1278	0
-	+	1280	0
-	+	1281	3
-	+	1282	9
-	+	1283	0
-	+	1284	3
-	+	1285	0
-	+	1284	0
-	+	1286	3
-	+	1288	0
-	+	1421	0
-	+	1250	0
-	+	1309	0
-	+	1314	0
-	+	1352	0
-	+	1314	0
-	+	1316	0
-	+	1328	0
-	+	1330	0
-	+	1329	0
-	+	1331	0
-	+	1351	0
-	+	1349	3
-	+	1345	3
-	+	1341	3
-	+	1337	3
-	+	1333	3
-	+	1360	0
-	+	1368	0
-	+	1372	0
-	+	1377	0
-	+	1384	0
-	+	1377	0
-	+	1379	0
+> c:\Work\TFS\FoodCORE_KNH\02_Online\FoodCORE\knh201_e\js\knh201e1_event_n.js
+	"	162	0
+	^	2637	4
+	.	162	0
+	+	375	19
+	+	378	0
+	+	375	20
+	+	376	22
+	+	377	0
+	+	1378	17
 	+	1381	0
-	+	1383	0
-	+	1399	0
-	+	1425	0
-	+	1450	0
-	+	1475	0
-	+	1500	0
-	+	1525	0
-	+	1555	0
-	+	1581	0
-	+	1615	0
-	+	8	0
-	+	129	0
-	a	1249	0
+	+	1378	18
+	+	1379	20
+	+	1380	0
+	+	1502	17
+	+	1505	0
+	+	1502	18
+	+	1503	20
+	+	1504	0
+	+	883	0
+	+	1736	0
+	+	2514	0
+	+	2524	0
+	+	2550	0
+	+	2635	18
+	+	2636	20
+	+	2637	0
+	+	3202	0
+	+	790	0
+	+	231	0
+	+	234	0
+	+	235	0
+	+	226	0
+	+	223	0
+	+	219	0
+	+	199	0
+	+	202	0
+	+	203	0
+	+	207	0
+	+	210	0
+	+	211	0
+	+	215	0
+	+	218	0
+	+	162	0
 
-> ~\Documents\Visual Studio 2010\Projects\FoodCOREPT\FoodCOREPT.sln
-	"	24	9
+> c:\Work\FoodCOREKNH\knh201_e\js\knh201e1_event_n.js
+	"	162	0
+	^	2636	4
+	.	231	0
+	+	162	0
+	+	169	0
+	+	790	0
+	+	883	0
+	+	3202	0
+	+	1736	0
+	+	2514	0
+	+	2524	0
+	+	2550	0
+	+	2603	0
+	+	2637	0
+	+	378	0
+	+	374	42
+	+	375	20
+	+	376	22
+	+	377	0
+	+	1381	0
+	+	1377	0
+	+	1377	54
+	+	1381	0
+	+	1377	40
+	+	1378	18
+	+	1379	20
+	+	1380	0
+	+	1505	0
+	+	1501	40
+	+	1502	18
+	+	1503	20
+	+	1504	0
+	+	2635	18
+	+	2636	0
+	+	231	0
 
-> C:\Work\FoodCOREPT\fej500_d\fej500d1.aspx
-	"	561	97
-	^	561	98
-	.	561	97
-	+	561	72
-	+	569	75
-	+	577	75
-	+	607	71
-	+	615	74
-	+	623	70
-	+	561	98
-	+	569	102
-	+	577	102
-	+	587	107
-	+	561	97
+> c:\Work\TFS\FoodCORE_KNH\02_Online\FoodCORE\App_Code\Knh201_e\Facade\Knh201e1\Knh201e1Facade_Btntoroku_frm.cs
+	"	484	0
+	.	197	0
+	+	41	0
+	+	116	0
+	+	144	0
+	+	197	0
 
-> c:\Work\FoodCOREPT\fej100_e\fej100d1.aspx
+> c:\Work\FoodCOREPT\App_Code\Fkh100_e\Facade\Fkh100e1\Fkh100e1Facade_Btntoroku_frm.cs
+	"	431	0
+	.	104	23
+	+	41	0
+	+	104	23
+
+> ~\App_Code\Knh201_e\Facade\Knh201e1\Knh201e1Facade_Btntoroku_frm.cs
 	"	1	0
 
-> C:\Work\FoodCOREPT\fej500_d\css\fej500d1.css
-	"	67	86
-	^	66	2
-	.	66	1
-	+	62	0
-	+	63	53
-	+	64	0
-	+	66	0
-	+	64	1
-	+	66	1
+> C:\Work\TFS\FoodCORE_ST\02_Online\FoodCORE\fkh100_e\js\fkh100e1_event_n.js
+	"	1	0
 
-> c:\Work\FoodCOREPT\fej100_e\css\fej100d1.css
-	"	69	0
+> c:\Work\FoodCOREPT\fkh100_e\js\fkh100e1_event_n.js
+	"	3153	2
+	^	1462	4
+	.	1462	0
+	+	833	0
+	+	839	0
+	+	845	0
+	+	849	0
+	+	862	0
+	+	865	0
+	+	916	0
+	+	923	0
+	+	925	0
+	+	952	0
+	+	957	0
+	+	962	0
+	+	974	0
+	+	990	0
+	+	998	0
+	+	1004	0
+	+	1007	0
+	+	1015	0
+	+	1020	0
+	+	1023	0
+	+	1031	0
+	+	1034	0
+	+	1037	0
+	+	1040	0
+	+	1075	0
+	+	1080	0
+	+	1083	0
+	+	1086	0
+	+	1095	0
+	+	1100	0
+	+	1110	0
+	+	1119	0
+	+	1125	0
+	+	1134	0
+	+	1143	0
+	+	1152	0
+	+	1159	0
+	+	1166	0
+	+	1172	0
+	+	1243	0
+	+	1300	0
+	+	1352	0
+	+	1392	0
+	+	1437	0
+	+	1440	0
+	+	1447	0
+	+	1471	0
+	+	1474	0
+	+	1518	0
+	+	1578	0
+	+	1670	0
+	+	1703	0
+	+	1756	0
+	+	1818	0
+	+	1952	0
+	+	2008	0
+	+	2135	0
+	+	2078	0
+	+	2372	0
+	+	2459	0
+	+	2471	0
+	+	2476	0
+	+	2513	0
+	+	2528	0
+	+	2534	0
+	+	2538	0
+	+	2542	0
+	+	2547	0
+	+	2567	0
+	+	2581	0
+	+	2588	0
+	+	2592	0
+	+	2595	0
+	+	2600	0
+	+	2611	0
+	+	2617	0
+	+	2626	0
+	+	2636	0
+	+	2942	0
+	+	3021	0
+	+	3108	0
+	+	3146	0
+	+	1182	0
+	+	2580	0
+	+	2579	0
+	+	378	0
+	+	374	42
+	+	375	20
+	+	376	22
+	+	377	0
+	+	1340	0
+	+	1336	40
+	+	1337	18
+	+	1338	20
+	+	1339	0
+	+	1463	0
+	+	1459	40
+	+	1460	18
+	+	1461	20
+	+	1462	0
 
-> C:\Work\FoodCOREPT\fam260_e\fam260d1.aspx
-	"	216	106
-	^	216	107
-	.	216	105
-	+	214	103
-	+	214	0
-	+	214	102
-	+	216	105
-	+	214	102
-	+	216	105
-	+	214	102
-	+	216	105
-	+	214	102
-	+	216	105
-	+	214	102
-	+	216	105
-	+	214	102
-	+	216	105
-	+	214	102
-	+	216	105
-	+	214	102
-	+	216	105
-	+	214	102
-	+	216	105
-	+	214	102
-	+	216	105
+> C:\Work\FoodCOREKNH\sql-define\xml\sql\knh\KNH201_E.xml
+	"	2178	3
+	.	2153	3
+	+	2153	0
+	+	2152	2
+	+	2153	3
 
-> C:\Work\FoodCOREPT\fam260_e\css\fam260d1.css
-	"	54	1
-	.	40	54
-	+	40	54
+> C:\Work\TFS\FoodCORE_ST\02_Online\FoodCORE\App_Code\Fkh100_e\Facade\Fkh100e1Facade.cs
+	"	3480	14
 
-> C:\Work\FoodCOREPT\App_Code\Fam260_e\DontEdit\Formvo\Baseform\Fam260d1M1BaseForm.cs
-	"	160	24
+> c:\Work\FoodCOREPT\App_Code\Fkh100_e\Facade\Fkh100e1Facade.cs
+	"	5100	0
+	.	48	0
+	+	48	0
 
-> C:\Work\FoodCOREPT\App_Code\Fam260_e\DontEdit\Request\Fam260d1RequestHelper.cs
-	"	368	23
+> ~\App_Code\Knh201_e\Facade\Knh201e1Facade.cs
+	"	1	0
 
-> C:\Work\FoodCOREPT\App_Code\Fam260_e\Facade\Fam260d1Facade.cs
-	"	373	0
+> c:\Work\TFS\FoodCORE_KNH\02_Online\FoodCORE\App_Code\Knh201_e\Facade\Knh201e1Facade.cs
+	"	216	5
+	.	1742	0
+	+	3578	0
+	+	3578	0
+	+	337	0
+	+	370	0
+	+	821	0
+	+	1353	0
+	+	1760	0
+	+	1768	0
+	+	1772	0
+	+	1790	0
+	+	2114	0
+	+	2115	0
+	+	4223	0
+	+	4464	0
+	+	4477	0
+	+	4493	0
+	+	4167	0
+	+	262	0
+	+	264	0
+	+	266	0
+	+	267	0
+	+	268	0
+	+	269	0
+	+	270	0
+	+	266	0
+	+	4159	0
+	+	4163	0
+	+	1742	0
 
-> C:\Work\FoodCOREPT\App_Code\Fam260_e\VO\Fam260d1M1ResultVO.cs
-	"	347	15
-
-> C:\Work\FoodCOREPT\App_Code\Fam260_e\Facade\Fam260d1\Fam260d1Facade_Btncsv_shtsryk_frm.cs
-	"	161	37
-
-> C:\Work\FoodCOREPT\sql-define\xml\sql\fam\FAM260_E.xml
-	"	176	0
-	^	169	4
-	.	51	0
-	+	49	0
-	+	9	0
-	+	50	0
-	+	49	0
-	+	8	0
-	+	9	0
-	+	27	58
-	+	28	0
-	+	27	0
-	+	28	11
-	+	29	0
-	+	16	50
-	+	51	0
-	+	52	0
-	+	54	0
-	+	56	0
-	+	55	3
-	+	57	0
-	+	59	0
-	+	61	0
-	+	60	3
-	+	62	0
-	+	64	0
-	+	66	0
-	+	65	3
+> ~\Documents\20131015_debug.cs
+	"	37	0
+	^	187	46
+	.	188	0
+	+	60	0
 	+	67	0
-	+	69	0
-	+	71	0
-	+	70	3
-	+	72	0
-	+	74	0
+	+	66	0
+	+	67	0
+	+	64	0
+	+	65	0
+	+	64	0
+	+	63	0
+	+	64	0
+	+	63	0
+	+	62	12
+	+	67	0
+	+	73	0
+	+	73	32
 	+	76	0
-	+	75	3
-	+	77	0
-	+	79	0
-	+	81	0
-	+	80	3
-	+	82	0
-	+	84	0
-	+	86	0
-	+	85	3
-	+	87	0
-	+	89	0
-	+	91	0
-	+	90	3
+	+	73	0
+	+	74	0
+	+	93	18
+	+	92	18
 	+	92	0
-	+	93	0
-	+	94	0
-	+	96	0
-	+	95	3
-	+	97	0
 	+	99	0
-	+	101	0
-	+	100	3
-	+	102	0
-	+	104	0
-	+	106	0
-	+	105	3
-	+	107	0
-	+	109	0
-	+	111	0
-	+	110	3
-	+	112	0
-	+	114	0
-	+	116	0
-	+	115	3
-	+	117	1
-	+	119	10
-	+	119	24
-	+	122	0
-	+	119	0
-	+	123	0
-	+	125	10
-	+	127	0
-	+	125	0
-	+	129	0
-	+	131	0
-	+	130	3
-	+	132	0
-	+	144	32
-	+	146	0
-	+	144	0
-	+	143	2
-	+	146	2
-	+	145	0
-	+	144	0
-	+	145	0
-	+	154	0
-	+	155	0
-	+	157	0
-	+	159	0
-	+	168	18
+	+	103	98
+	+	92	0
+	+	184	64
+	+	190	0
+	+	189	18
+	+	190	0
+	+	192	0
+	+	191	12
+	+	192	25
+	+	193	0
+	+	197	6
+	+	200	0
+	+	198	0
+	+	200	0
+	+	199	0
+	+	197	6
+	+	203	0
+	+	202	10
+	+	222	0
+	+	221	8
+	+	251	18
+	+	252	0
+	+	251	6
+	+	167	14
+	+	168	68
 	+	169	0
 	+	168	0
-	+	174	0
-	+	169	2
-	+	167	2
-	+	7	0
-	+	49	0
-	+	51	0
-	a	9	10
+	+	169	0
+	+	170	0
+	+	169	8
+	+	175	0
+	+	182	14
+	+	107	0
+	+	112	0
+	+	106	16
+	+	111	15
+	+	138	18
+	+	139	0
+	+	137	0
+	+	101	12
+	+	83	18
+	+	86	0
+	+	85	0
+	+	90	0
+	+	91	0
+	+	98	0
+	+	94	0
+	+	97	0
+	+	98	0
+	+	87	22
+	+	275	0
+	+	276	0
+	+	278	16
+	+	279	16
+	+	87	0
+	+	84	0
+	+	33	0
+	+	40	14
+	+	61	0
+	+	96	89
+	+	166	89
+	+	62	20
+	+	34	6
+	+	62	17
+	+	49	6
+	+	50	50
+	+	100	0
+	+	104	0
+	+	100	0
+	+	104	0
+	+	101	37
+	+	185	0
+	+	105	0
+	+	105	5
+	+	105	0
+	+	188	0
+	+	187	0
+	+	188	0
+	+	188	0
 
-> c:\Work\Export_FAM260E\dep_files.cmd
-	"	23	59
-	^	19	3
+> ~\Documents\memp_knh_proj.md
+	"	4	7
+
+> c:\Work\Export_KNH201_E\dep_files.cmd
+	"	7	0
+	^	9	4
 	.	1	0
-	+	5	0
+	+	1	0
 	+	8	0
 	+	9	3
 	+	10	0
 	+	1	0
-	+	17	0
-	+	16	0
-	+	17	3
-	+	17	0
-	+	18	0
-	+	20	3
-	+	21	0
-	+	18	0
-	+	20	0
-	+	20	0
-	+	18	4
-	+	20	4
-	+	21	4
-	+	21	4
-	+	21	4
-	+	22	4
-	+	22	4
-	+	23	4
-	+	19	2
-	+	20	67
-	+	21	67
-	+	21	61
-	+	21	61
-	+	22	53
-	+	22	53
-	+	23	59
-	+	20	67
-	+	21	67
-	+	21	61
-	+	21	61
-	+	22	53
-	+	22	53
-	+	23	59
-	+	21	0
-	+	22	0
+	+	2	0
+	+	3	0
+	+	4	0
+	+	5	0
+	+	6	0
+	+	7	0
 	+	1	0
 
-> c:\Work\FoodCOREPT\fam260_e\fam260d1.aspx.cs
-	"	1039	0
+> C:\Work\FoodCOREPT\App_Code\Fkh100_e\Constant\Fkh100_eConstant.cs
+	"	200	0
 
-> C:\Work\FoodCOREPT\fam271_e\fam271e1.aspx
-	"	375	6
-	^	70	88
-	.	71	59
-	+	67	0
-	+	68	0
-	+	80	0
-	+	93	0
-	+	57	83
-	+	70	83
-	+	57	84
-	+	70	84
-	+	235	0
-	+	57	59
-	+	57	71
-	+	58	71
-	+	70	71
-	+	71	71
-	+	57	73
-	+	70	68
-	+	57	68
-	+	58	68
-	+	71	68
-	+	70	68
-	+	57	87
-	+	70	87
-	+	58	68
-	+	71	68
-	+	57	122
-	+	70	73
-	+	57	68
-	+	70	68
-	+	57	59
-	+	58	59
-	+	70	59
-	+	71	59
-
-> C:\Work\FoodCOREPT\fam271_e\fam271e1.aspx.cs
+> C:\Work\FoodCOREKNH\App_Code\Knh201_e\Constant\Knh201_eConstant.cs
 	"	1	0
 
-> C:\Work\FoodCOREPT\fam003_e\fam003e1.aspx
-	"	64	99
+> c:\Work\FoodCOREKNH\knh201_e\js\fkh100e1_event_n.js
+	"	1	0
 
-> c:\Work\TFS\FoodCORE_ST\02_Online\FoodCORE\fam280_e\fam280d1.aspx
-	"	84	3
+> C:\Work\FoodCOREKNH\App_Code\Fkh100_e\Facade\Fkh100e1\Fkh100e1Facade_Btntoroku_frm.cs
+	"	1	0
 
-> C:\Work\TFS\FoodCORE_ST\02_Online\FoodCORE\fam280_e\fam280e1.aspx
-	"	32	0
+> c:\Work\FoodCOREPT\App_Code\Fkh100_e\Facade\Fkh100d1Facade.cs
+	"	150	0
 
-> C:\Work\FoodCOREPT\fam271_e\css\fam271e1.css
-	"	78	0
-
-> c:\Work\TFS\FoodCORE_ST\02_Online\FoodCORE\fam001_e\fam001d1.aspx
-	"	25	0
-
-> c:\Work\TFS\FoodCORE_ST\02_Online\FoodCORE\fkh200_e\fkh200e1.aspx
-	"	90	0
-
-> c:\Work\Export_FAM271E\dep_files.cmd
-	"	10	0
-	^	10	3
-	.	10	0
-	+	3	0
+> C:\work\Export_KNH113_E\dep_files.cmd
+	"	9	44
+	^	6	4
+	.	4	0
+	+	10	0
+	+	1	0
+	+	5	0
+	+	5	0
+	+	5	0
+	+	6	0
 	+	5	0
 	+	6	3
 	+	7	0
-	+	1	72
-	+	2	57
-	+	3	40
-	+	4	47
-	+	10	0
+	+	1	0
+	+	2	0
+	+	3	0
+	+	4	0
+	+	1	0
+	+	2	0
+	+	3	0
+	+	4	0
 
-> ~\Documents\20130729_debug.cs
-	"	26	0
-	^	25	0
-	.	24	51
-	+	91	3
-	+	92	0
-	+	91	3
-	+	91	7
-	+	92	0
-	+	110	0
-	+	93	0
-	+	101	84
-	+	93	84
-	+	98	90
-	+	99	86
-	+	110	0
-	+	112	0
-	+	111	0
-	+	176	0
-	+	177	0
-	+	105	14
-	+	104	0
-	+	106	20
-	+	108	78
-	+	89	0
-	+	90	0
-	+	81	0
-	+	81	94
-	+	69	8
-	+	69	7
-	+	81	0
-	+	80	0
-	+	83	8
-	+	86	50
-	+	87	0
-	+	86	0
-	+	87	53
-	+	84	0
-	+	86	9
-	+	87	9
-	+	71	12
-	+	79	0
-	+	73	0
-	+	72	10
-	+	73	0
-	+	72	68
-	+	78	1
-	+	79	0
-	+	66	0
-	+	15	0
-	+	62	0
-	+	56	0
-	+	56	13
-	+	58	0
-	+	59	64
-	+	58	0
-	+	56	4
-	+	57	0
-	+	56	2
-	+	62	0
-	+	61	8
-	+	63	0
-	+	64	0
-	+	54	0
-	+	53	0
-	+	29	2
-	+	29	0
-	+	30	0
-	+	31	0
-	+	32	16
-	+	43	0
-	+	51	50
-	+	52	0
-	+	51	0
-	+	52	53
-	+	49	0
-	+	46	0
-	+	50	0
-	+	49	0
-	+	33	0
-	+	34	0
-	+	36	0
+> C:\work\Export_KNH113_E\App_Code\Qqoutput\Form\Codemap\KNH113E1ActionCodeInfoVO.cs
+	"	1	0
+	.	1	0
 	+	35	0
-	+	36	0
-	+	35	70
-	+	37	0
-	+	41	0
-	+	37	1
-	+	41	0
-	+	27	0
-	+	28	0
-	+	21	0
-	+	17	0
-	+	17	5
-	+	19	0
-	+	20	57
-	+	17	21
-	+	18	0
-	+	17	4
-	+	18	0
-	+	17	2
-	+	22	0
-	+	23	0
-	+	24	51
-
-> ~\Documents\20130727_debug.cs
-	"	119	0
-	^	23	20
-	.	213	0
-	+	97	0
-	+	96	12
-	+	129	11
-	+	81	0
-	+	77	0
-	+	76	18
-	+	77	0
-	+	74	0
-	+	73	4
-	+	72	0
-	+	63	0
-	+	64	10
-	+	64	11
-	+	65	0
-	+	64	32
-	+	64	49
-	+	81	0
-	+	64	49
-	+	64	46
-	+	64	48
-	+	65	0
-	+	64	116
-	+	65	0
-	+	66	1
-	+	70	0
-	+	56	0
-	+	31	0
-	+	12	0
-	+	12	10
-	+	14	72
-	+	12	3
-	+	14	0
-	+	12	2
-	+	13	0
-	+	29	26
-	+	30	0
-	+	52	0
-	+	55	0
-	+	55	0
-	+	55	0
-	+	32	0
-	+	55	0
-	+	54	0
-	+	53	0
-	+	49	12
-	+	48	1
-	+	47	16
-	+	48	0
-	+	33	0
-	+	48	0
-	+	51	20
-	+	50	0
-	+	34	51
-	+	27	0
-	+	26	12
-	+	27	7
-	+	27	14
-	+	27	21
-	+	27	13
-	+	27	20
-	+	28	0
-	+	27	14
-	+	35	81
-	+	37	0
-	+	37	0
-	+	37	2
-	+	37	0
-	+	37	24
-	+	37	27
-	+	37	22
-	+	37	0
-	+	37	22
-	+	37	0
-	+	37	39
-	+	37	85
-	+	37	0
-	+	37	57
-	+	37	28
-	+	37	0
-	+	35	17
-	+	37	0
-	+	35	69
-	+	36	65
-	+	37	0
-	+	38	53
-	+	39	15
-	+	41	33
-	+	43	77
-	+	44	11
-	+	45	0
-	+	24	0
-	+	16	0
-	+	15	0
-	+	17	111
-	+	19	0
-	+	23	0
-	+	19	1
-	+	23	1
-	+	24	0
-	+	213	0
-
-> ~\Documents\20130725_debug.cs
-	"	46	0
-	^	46	0
-	.	46	0
-	+	66	6
-	+	67	0
-	+	106	0
-	+	97	0
-	+	105	0
-	+	106	0
-	+	98	0
-	+	105	0
-	+	106	0
-	+	96	7
-	+	105	0
-	+	99	0
-	+	106	51
-	+	107	53
-	+	108	0
-	+	100	0
-	+	105	0
-	+	100	0
-	+	105	0
-	+	102	12
-	+	105	0
-	+	102	12
-	+	101	0
-	+	103	0
-	+	104	28
-	+	103	26
-	+	104	26
-	+	72	0
-	+	73	0
-	+	72	0
-	+	95	0
-	+	94	43
-	+	95	0
-	+	74	0
-	+	93	0
-	+	75	48
-	+	77	0
-	+	76	0
-	+	92	0
-	+	64	0
-	+	14	0
-	+	61	0
-	+	57	0
-	+	15	2
-	+	15	6
-	+	16	0
-	+	17	0
-	+	18	0
-	+	17	0
-	+	19	0
-	+	24	96
-	+	19	0
-	+	23	0
-	+	57	0
-	+	60	0
-	+	58	0
-	+	61	51
-	+	62	53
-	+	63	0
-	+	26	0
-	+	28	0
-	+	174	0
-	+	197	0
-	+	28	0
-	+	27	14
-	+	11	0
-	+	10	0
-	+	12	6
-	+	12	15
-	+	12	0
-	+	12	0
-	+	12	42
-	+	12	0
-	+	53	88
-	+	55	22
-	+	34	10
-	+	34	11
-	+	31	0
-	+	30	11
-	+	32	16
-	+	35	0
-	+	35	0
-	+	34	11
-	+	41	0
-	+	50	0
-	+	44	0
-	+	43	60
-	+	44	0
-	+	50	0
-	+	44	0
-	+	50	0
-	+	50	0
-	+	50	0
-	+	50	0
 	+	47	0
-	+	48	0
-	+	49	0
-	+	50	0
-	+	47	0
-	+	46	0
-
-> ~\Documents\20130726_debug.cs
-	"	89	0
-	^	12	0
-	.	12	0
-	+	89	56
-	+	97	0
-	+	89	0
-	+	96	0
-	+	93	74
-	+	93	23
-	+	93	44
-	+	93	59
-	+	93	73
-	+	93	81
-	+	93	101
-	+	96	0
-	+	93	0
-	+	91	54
-	+	91	0
+	+	59	0
+	+	71	0
+	+	83	0
 	+	95	0
-	+	91	0
-	+	91	0
-	+	91	0
-	+	91	16
-	+	91	28
-	+	91	28
-	+	91	28
-	+	91	0
-	+	91	28
-	+	91	27
-	+	91	42
-	+	91	53
-	+	91	0
-	+	95	0
-	+	95	38
-	+	95	37
-	+	95	58
-	+	96	0
-	+	95	0
-	+	90	0
-	+	94	0
-	+	90	18
-	+	91	0
-	+	90	17
-	+	90	26
-	+	91	0
-	+	90	31
-	+	94	26
-	+	95	0
-	+	94	25
-	+	94	40
-	+	95	0
-	+	94	0
-	+	91	61
-	+	95	80
-	+	78	0
-	+	96	0
-	+	80	39
-	+	80	60
-	+	80	39
-	+	80	40
-	+	87	0
-	+	86	0
-	+	81	0
-	+	80	0
-	+	82	0
-	+	86	0
-	+	82	1
-	+	86	0
-	+	88	0
-	+	16	0
-	+	15	0
-	+	17	0
-	+	24	19
-	+	24	0
-	+	17	0
-	+	17	8
-	+	24	6
-	+	17	18
-	+	17	0
-	+	17	7
-	+	23	0
-	+	18	0
-	+	19	0
-	+	22	30
-	+	24	5
-	+	64	0
-	+	24	5
-	+	26	0
-	+	97	0
-	+	14	0
-	+	10	0
-	+	12	0
-	+	12	0
-	+	12	4
-	+	12	0
-	+	12	22
-	+	12	12
-	+	12	0
-	+	12	0
-	+	12	3
-	+	12	0
-	+	12	2
-	+	12	0
+	+	107	0
+	+	119	0
+	+	131	0
+	+	143	0
+	+	155	0
+	+	167	0
+	+	1	0
 
-> C:\Work\FoodCOREPT\sem050_e\sem050d1.aspx
-	"	297	91
-	^	261	100
-	.	297	89
-	+	57	39
-	+	58	66
-	+	59	66
-	+	70	38
-	+	71	66
-	+	72	66
-	+	82	38
-	+	83	66
-	+	84	66
-	+	94	38
-	+	107	38
-	+	223	0
-	+	243	0
-	+	252	0
-	+	261	0
-	+	270	0
-	+	279	0
-	+	288	0
-	+	297	0
-	+	270	100
-	+	279	93
-	+	288	98
-	+	297	92
-	+	270	96
-	+	279	90
-	+	288	95
-	+	297	89
-	+	270	96
-	+	279	90
-	+	288	95
-	+	297	89
-	+	223	89
-	+	243	90
-	+	252	103
-	+	261	98
-	+	270	96
-	+	279	90
-	+	288	95
-	+	297	89
-
-> C:\Work\FoodCOREPT\sem050_e\css\sem050d1.css
-	"	37	56
-	.	37	54
-	+	40	54
-	+	41	54
-	+	40	54
-	+	41	54
-	+	40	54
-	+	37	54
-
-> C:\Work\FoodCOREPT\fes500_e\fes500e1.aspx.cs
-	"	3802	3
-
-> C:\Work\FoodCOREPT\fes500_e\js\fes500e1_event_n.js
-	"	314	5
-	^	121	0
-	.	121	0
-	+	4866	36
-	+	4893	36
-	+	4879	36
-	+	2364	0
-	+	2356	0
-	+	2392	0
-	+	2400	0
-	+	2364	0
-	+	2356	0
-	+	2356	0
-	+	2394	0
-	+	2400	0
-	+	2400	0
-	+	2392	0
-	+	2370	0
-	+	2612	0
-	+	2410	0
-	+	2410	0
-	+	2409	0
-	+	2366	0
-	+	2367	4
-	+	2365	0
-	+	2313	0
-	+	2311	0
-	+	2421	0
-	+	2421	0
-	+	2420	0
-	+	2452	0
-	+	2506	0
-	+	2362	0
-	+	2362	0
-	+	2361	0
-	+	2362	0
-	+	4766	0
-	+	4773	0
-	+	4774	0
-	+	4810	0
-	+	4817	0
-	+	4823	0
-	+	4830	0
-	+	268	0
-	+	267	0
-	+	267	0
-	+	169	0
-	+	169	0
-	+	169	0
-	+	169	43
-	+	169	0
-	+	170	0
-	+	169	0
-	+	5847	0
-	+	176	0
-	+	188	0
-	+	211	0
-	+	215	0
-	+	121	0
-	a	267	0
-	k	577	13
+> C:\work\Export_KNH113_E\App_GlobalResources\form\knh113e1.aspx.ja-JP.resx
+	"	177	4

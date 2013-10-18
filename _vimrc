@@ -3,7 +3,7 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 01-Aug-2013.
+" Last Change: 08-Oct-2013.
 " Maintainer:  MURAOKA Taro <koron@tka.att.ne.jp>
 "
 " 解説:
@@ -82,7 +82,6 @@ endif
 "  "silent! set keymap=japanese
 "  "set iminsert=0 imsearch=0
 "endif
-
 "" 非GUI日本語コンソールを使っている場合の設定
 "if !has('gui_running') && &encoding != 'cp932' && &term == 'win32'
 "  set termencoding=cp932
@@ -347,6 +346,12 @@ let g:surround_71 = "_(\"\r\")" " 71 = G
 "-------------------------------------------------------------------------------
 ":set noswapfile
 
+" vimdiff color
+hi DiffAdd    ctermfg=black ctermbg=2
+hi DiffChange ctermfg=black ctermbg=3
+hi DiffDelete ctermfg=black ctermbg=6
+hi DiffText   ctermfg=black ctermbg=7
+
 " use for Align plugin
 set nocp
 
@@ -362,4 +367,10 @@ let g:ctrlp_open_new_file       = 1   " 新規ファイル作成時にタブで開く
 
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
+" \path で現在のファイルのフルパスを挿入
+inoremap <Leader>path <C-R>=expand('%:p')<CR>
+" コマンドライン出力は echo expand('%:p')
+
+"-------------------------------------------------------------------------------
+"let g:previm_open_cmd
 
