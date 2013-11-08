@@ -1,0 +1,15 @@
+#Extended file properties defined by DbVisualizer
+#Mon Oct 21 18:54:37 JST 2013
+last.execution_count=1
+last.elapsed_time=0.307
+exec.schema=dbo
+file.comment=
+last.execution_time=1382349277192
+file.encoding=MS932
+last.database_type=SQL Server
+last.affected_row_count=23
+exec.catalog=FoodCORE_KNH
+last.sql_preview=SELECT TOP ( SELECT COUNT(ROWID) FROM M_EDI_DEFAUL
+last.execution_error_count=0
+last.execution_success_count=1
+exec.connection=2

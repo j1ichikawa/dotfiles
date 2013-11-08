@@ -1,0 +1,15 @@
+#Extended file properties defined by DbVisualizer
+#Tue Oct 22 20:52:53 JST 2013
+last.execution_count=1
+last.elapsed_time=0.184
+exec.schema=
+file.comment=
+last.execution_time=1382442773260
+file.encoding=MS932
+last.database_type=SQL Server
+last.affected_row_count=58
+exec.catalog=FoodCORE_ST
+last.sql_preview=SELECT * FROM M_BIZ_PARAM WHERE KAISHA_CD \= 'HK' A
+last.execution_error_count=0
+last.execution_success_count=1
+exec.connection=3

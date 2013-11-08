@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LayoutPersistence>
+    <DockableBarManager frameState="6" persistenceName="0" version="20">
+        <UndockedBounds height="0" width="0" x="0" y="0"/>
+        <DockableBarContext currentDockSide="1" currentMode="2"
+            dockId="0" dockedHeight="0" dockedWidth="0" initIndex="1"
+            initMode="2" initPosition="1" initSide="1" key="Main Toolbar">
+            <DockableBarPreviousState dockId="0" fcId="0" mode="2"
+                newRow="1" row="0" side="1" start="0" type="close"/>
+        </DockableBarContext>
+        <DockableBarContainer side="1">
+            <DockableBarList>
+                <DockableBarItem start="0">
+                    <DockableBar key="Main Toolbar" preferredRowCount="0"/>
+                </DockableBarItem>
+            </DockableBarList>
+        </DockableBarContainer>
+    </DockableBarManager>
+    <DockingManager frameState="6" persistenceName="1" version="20">
+        <Bounds height="768" width="1024" x="171" y="0"/>
+        <DockContext autohideHeight="0" autohideWidth="254"
+            available="1" canMode="15" currentDockSide="8"
+            currentMode="2" dockId="30216" dockedHeight="342"
+            dockedWidth="254" initAutohideHeight="200"
+            initAutohideWidth="200" initIndex="0" initMode="4"
+            initPosition="1" initSide="8" key="scripts">
+            <InitUndockedBounds height="500" width="500" x="0" y="0"/>
+            <DockPreviousState dockId="30216" fcId="0" index="0"
+                mode="2" rootId="0" side="8" type="close">
+                <DockParentState ccId="0" dockId="0" orientation="0">
+                    <DockChild dockId="30216"/>
+                </DockParentState>
+            </DockPreviousState>
+            <DockPreviousState dockId="30216" fcId="63876" index="0"
+                mode="4" rootId="2" side="8" type="autohide">
+                <Bounds height="659" width="1366" x="0" y="0"/>
+                <DockChild dockId="30216"/>
+                <DockChild dockId="40531"/>
+                <DockParentState ccId="63115" dockId="63876" orientation="1">
+                    <DockChild dockId="32748"/>
+                    <DockChild dockId="63876"/>
+                    <DockChild dockId="18466"/>
+                </DockParentState>
+            </DockPreviousState>
+        </DockContext>
+        <DockContext autohideHeight="0" autohideWidth="254"
+            available="1" canMode="15" currentDockSide="8"
+            currentMode="4" dockId="26285" dockedHeight="394"
+            dockedWidth="254" initAutohideHeight="200"
+            initAutohideWidth="200" initIndex="0" initMode="4"
+            initPosition="0" initSide="8" key="databases">
+            <InitUndockedBounds height="500" width="500" x="0" y="0"/>
+            <DockPreviousState dockId="26285" fcId="32748" index="0"
+                mode="4" rootId="2" side="8" type="close">
+                <Bounds height="659" width="1342" x="0" y="0"/>
+                <DockChild dockId="26285"/>
+                <DockParentState ccId="63115" dockId="32748" orientation="1">
+                    <DockChild dockId="32748"/>
+                    <DockChild dockId="18466"/>
+                </DockParentState>
+            </DockPreviousState>
+            <DockPreviousState dockId="26285" fcId="32748" index="0"
+                mode="4" rootId="2" side="8" type="autohide">
+                <Bounds height="659" width="1342" x="0" y="0"/>
+                <DockChild dockId="26285"/>
+                <DockParentState ccId="63115" dockId="32748" orientation="1">
+                    <DockChild dockId="32748"/>
+                    <DockChild dockId="18466"/>
+                </DockParentState>
+            </DockPreviousState>
+        </DockContext>
+        <DockContext autohideHeight="0" autohideWidth="254"
+            available="1" canMode="15" currentDockSide="8"
+            currentMode="2" dockId="40531" dockedHeight="200"
+            dockedWidth="254" initAutohideHeight="200"
+            initAutohideWidth="200" initIndex="0" initMode="4"
+            initPosition="1" initSide="8" key="favorites">
+            <InitUndockedBounds height="500" width="500" x="0" y="0"/>
+            <DockPreviousState dockId="40531" fcId="0" index="1"
+                mode="2" rootId="0" side="8" type="close">
+                <DockParentState ccId="0" dockId="0" orientation="0">
+                    <DockChild dockId="40531"/>
+                </DockParentState>
+            </DockPreviousState>
+            <DockPreviousState dockId="40531" fcId="63876" index="0"
+                mode="4" rootId="2" side="8" type="autohide">
+                <Bounds height="659" width="1342" x="0" y="0"/>
+                <DockChild dockId="40531"/>
+                <DockParentState ccId="63115" dockId="63876" orientation="1">
+                    <DockChild dockId="32748"/>
+                    <DockChild dockId="63876"/>
+                    <DockChild dockId="18466"/>
+                </DockParentState>
+            </DockPreviousState>
+        </DockContext>
+        <ContainerContainer dockId="63115" initiallyEven="0"
+            orientation="1" proportionLayout="0">
+            <FrameContainer dockId="32748" selectedIndex="0">
+                <DockableFrame key="databases"/>
+            </FrameContainer>
+            <ContainerContainer dockId="18466" initiallyEven="0"
+                orientation="0" preferredHeight="403"
+                preferredWidth="1108" proportionLayout="0">
+                <Workspace acceptDockableFrame="0"/>
+            </ContainerContainer>
+        </ContainerContainer>
+        <AutoHideContainer side="3"/>
+        <AutoHideContainer side="7">
+            <SidePaneGroup selectedIndex="0">
+                <SidePaneItem>
+                    <DockableFrame key="scripts"/>
+                </SidePaneItem>
+            </SidePaneGroup>
+            <SidePaneGroup selectedIndex="0">
+                <SidePaneItem>
+                    <DockableFrame key="favorites"/>
+                </SidePaneItem>
+            </SidePaneGroup>
+        </AutoHideContainer>
+        <AutoHideContainer side="5"/>
+        <AutoHideContainer side="1"/>
+    </DockingManager>
+</LayoutPersistence>

@@ -1,0 +1,15 @@
+#Extended file properties defined by DbVisualizer
+#Mon Oct 21 20:54:49 JST 2013
+last.execution_count=1
+last.elapsed_time=0.069
+exec.schema=dbo
+file.comment=
+last.execution_time=1382356489186
+file.encoding=MS932
+last.database_type=SQL Server
+last.affected_row_count=23
+exec.catalog=FoodCORE_ST
+last.sql_preview=INSERT INTO M_EDI_DEFAULT_PARAM ( -- ROWID, KAISHA
+last.execution_error_count=0
+last.execution_success_count=1
+exec.connection=3

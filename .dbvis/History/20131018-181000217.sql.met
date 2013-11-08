@@ -1,0 +1,15 @@
+#Extended file properties defined by DbVisualizer
+#Fri Oct 18 18:10:00 JST 2013
+last.execution_count=1
+last.elapsed_time=0.162
+exec.schema=dbo
+file.comment=
+last.execution_time=1382087400205
+file.encoding=MS932
+last.database_type=SQL Server
+last.affected_row_count=14
+exec.catalog=FoodCORE_KNH
+last.sql_preview=SELECT PARAM_NAME FROM M_BIZ_PARAM WHERE SEGMENT \=
+last.execution_error_count=0
+last.execution_success_count=1
+exec.connection=2

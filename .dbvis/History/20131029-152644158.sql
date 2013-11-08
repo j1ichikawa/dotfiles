@@ -1,0 +1,3 @@
+SELECT * FROM KNH_PVFŽó’Žc
+WHERE “ü—Í“ú >= '20131029'
+

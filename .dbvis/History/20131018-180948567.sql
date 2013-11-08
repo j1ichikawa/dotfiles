@@ -1,0 +1,9 @@
+SELECT
+        PARAM_NAME
+FROM
+        M_BIZ_PARAM
+WHERE
+        SEGMENT = 'EDI'
+GROUP BY
+        PARAM_NAME
+

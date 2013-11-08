@@ -3,7 +3,7 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 08-Oct-2013.
+" Last Change: 22-Oct-2013.
 " Maintainer:  MURAOKA Taro <koron@tka.att.ne.jp>
 "
 " 解説:
@@ -373,4 +373,25 @@ inoremap <Leader>path <C-R>=expand('%:p')<CR>
 
 "-------------------------------------------------------------------------------
 "let g:previm_open_cmd
+
+"--------------------------------------------------------------------------
+" neobundle
+"set nocompatible               " Be iMproved
+"filetype off                   " Required!
+"
+"if has('vim_starting')
+"  set runtimepath+=~/.vim/bundle/neobundle.vim/
+"endif
+"
+"call neobundle#rc(expand('~/.vim/bundle/'))
+"
+"filetype plugin indent on     " Required!
+"
+"" Installation check.
+"if neobundle#exists_not_installed_bundles()
+"  echomsg 'Not installed bundles : ' .
+"        \ string(neobundle#get_not_installed_bundle_names())
+"  echomsg 'Please execute ":NeoBundleInstall" command.'
+"  "finish
+"endif
 

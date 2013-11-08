@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DbVisualizer>
+  <!--Saved at: Wed Nov 06 13:04:03 JST 2013-->
+  <General>
+    <AggregationNumberMaxScale>2</AggregationNumberMaxScale>
+    <AppFont>Default-plain-12</AppFont>
+    <AppOpenSQLFilesInNewJVM>false</AppOpenSQLFilesInNewJVM>
+    <AskQuit>true</AskQuit>
+    <AutoCompletionAutoPopup>false</AutoCompletionAutoPopup>
+    <AutoCompletionCase>Default</AutoCompletionCase>
+    <AutoCompletionInstant>false</AutoCompletionInstant>
+    <AutoCompletionSortColumns>true</AutoCompletionSortColumns>
+    <AutoCompletionSortTables>true</AutoCompletionSortTables>
+    <BookmarkFrameGeometry />
+    <BooleanFalseFormat>false</BooleanFalseFormat>
+    <BooleanTrueFormat>true</BooleanTrueFormat>
+    <CellEditingMode>window</CellEditingMode>
+    <CellWindowGeometry>433|84|500|600</CellWindowGeometry>
+    <ChartConfigurationWindowGeometry />
+    <CheckForUpdateIncludeBeta>false</CheckForUpdateIncludeBeta>
+    <CheckForUpdateInterval>weekly</CheckForUpdateInterval>
+    <CheckForUpdateLastCheck>1383627624459</CheckForUpdateLastCheck>
+    <ColumnDelimiter>\t</ColumnDelimiter>
+    <CommanderMaxColumns>-1</CommanderMaxColumns>
+    <CommanderMaxRows>1000</CommanderMaxRows>
+    <CompareSelectWindowGeometry />
+    <ConfirmDisconnectAll>true</ConfirmDisconnectAll>
+    <ConnectAndExecuteDefaultKey>connect</ConnectAndExecuteDefaultKey>
+    <DataGenerateFilterWithSorting>true</DataGenerateFilterWithSorting>
+    <DataMaxColumns>-1</DataMaxColumns>
+    <DataMaxFilters>15</DataMaxFilters>
+    <DataMaxRows>1000</DataMaxRows>
+    <DataMaxRowsInitial>-1</DataMaxRowsInitial>
+    <DatabasesTabDoubleClickAction>OpenInTab</DatabasesTabDoubleClickAction>
+    <DatabasesTabDoubleClickModifierAction>OpenInNewTab</DatabasesTabDoubleClickModifierAction>
+    <DatabasesTabOpenObjectAction>OpenInNewTab</DatabasesTabOpenObjectAction>
+    <DatabasesTabToolbarVisible>true</DatabasesTabToolbarVisible>
+    <DateFormat>yyyy-MM-dd</DateFormat>
+    <DebugDestination>Debug Window</DebugDestination>
+    <DebugDetailLevel>Full</DebugDetailLevel>
+    <DebugFilename />
+    <DebugLogLevel>Error</DebugLogLevel>
+    <DebugWindowAutoPopup>true</DebugWindowAutoPopup>
+    <DebugWindowGeometry />
+    <DecimalNumberFormat>Unformatted</DecimalNumberFormat>
+    <DriverFrameGeometry />
+    <DriverManagerBlackList>.*/mysql.*bin-g\.jar;ribo.jar;jtds3d.jar;jtds3.jar;jconn3d.jar;uninstaller.jar</DriverManagerBlackList>
+    <DriverManagerDisplayOnError>false</DriverManagerDisplayOnError>
+    <DriverManagerDisplayWhenNewFiles>true</DriverManagerDisplayWhenNewFiles>
+    <DriverManagerReplaceFiles>true</DriverManagerReplaceFiles>
+    <DriverManagerRunFinderAtStartup>true</DriverManagerRunFinderAtStartup>
+    <DriverManagerSearchPath>${dbvis.prefsdir}/jdbc;${dbvis.home}/jdbc</DriverManagerSearchPath>
+    <Encoding>MS932</Encoding>
+    <ExecutionTimeout>60</ExecutionTimeout>
+    <ExplainDefaultView>graph</ExplainDefaultView>
+    <ExplainGraphNavModeEnabled />
+    <ExplainGraphNodeContent>result-set-explainviewer-show-operation-data-command</ExplainGraphNodeContent>
+    <FavoritesBarVisible>true</FavoritesBarVisible>
+    <FavoritesTabToolbarVisible>true</FavoritesTabToolbarVisible>
+    <FavoritesWindowGeometry />
+    <FileChooserGeometry>355|167|657|435</FileChooserGeometry>
+    <FileQuickLoad>true|true|false|false|true|200</FileQuickLoad>
+    <FitTables>true</FitTables>
+    <FitTablesConsiderHeader>true</FitTablesConsiderHeader>
+    <FormEditorRightAlignedNumbers>false</FormEditorRightAlignedNumbers>
+    <GenerateSqlWithVariables>true</GenerateSqlWithVariables>
+    <GraphAnimate>true</GraphAnimate>
+    <GraphArcsToColumns>true</GraphArcsToColumns>
+    <GraphAutoEdgeRouting>true</GraphAutoEdgeRouting>
+    <GraphBridgeArcs>true</GraphBridgeArcs>
+    <GraphControlsVisible>true</GraphControlsVisible>
+    <GraphLayoutType>Hierarchic</GraphLayoutType>
+    <GraphNavModeEnabled>false</GraphNavModeEnabled>
+    <GraphNodeContent>Primary Key</GraphNodeContent>
+    <GraphReferencedOnly>false</GraphReferencedOnly>
+    <GraphSearchAutoZoom>true</GraphSearchAutoZoom>
+    <GraphShowArcLabel>false</GraphShowArcLabel>
+    <GraphShowOneLink>false</GraphShowOneLink>
+    <GridAutoShowWarnings>true</GridAutoShowWarnings>
+    <GridColumnLabelIsColumnAlias>true</GridColumnLabelIsColumnAlias>
+    <GridColumnSeparatorWidth>-1</GridColumnSeparatorWidth>
+    <GridColumnsTruncatedBG>#e7ab75</GridColumnsTruncatedBG>
+    <GridColumnsTruncatedBorder />
+    <GridColumnsTruncatedFG>#000000</GridColumnsTruncatedFG>
+    <GridCopyBlobType>Value</GridCopyBlobType>
+    <GridCopyClobType>Value</GridCopyClobType>
+    <GridDeletedBG>#f07074</GridDeletedBG>
+    <GridDeletedBorder>#ff0000</GridDeletedBorder>
+    <GridDeletedFG>#ffffff</GridDeletedFG>
+    <GridEditedBG>#ffffb4</GridEditedBG>
+    <GridEditedBorder>#ffff00</GridEditedBorder>
+    <GridEditedFG>#000000</GridEditedFG>
+    <GridEvenBG>#ffffff</GridEvenBG>
+    <GridEvenBorder />
+    <GridEvenFG>#000000</GridEvenFG>
+    <GridFont>MS UI Gothic-plain-12</GridFont>
+    <GridLinesColor>#d9d9d9</GridLinesColor>
+    <GridNullBG>#e8e8e8</GridNullBG>
+    <GridNullBorder />
+    <GridNullFG>#808080</GridNullFG>
+    <GridOddBG>#f0f5fa</GridOddBG>
+    <GridOddBorder />
+    <GridOddFG>#000000</GridOddFG>
+    <GridQuickFilterBG>#ffffdc</GridQuickFilterBG>
+    <GridQuickFilterBorder />
+    <GridQuickFilterFG>#000000</GridQuickFilterFG>
+    <GridReloadAfterEdit>false</GridReloadAfterEdit>
+    <GridShowRowHeader>true</GridShowRowHeader>
+    <HistoryTreeShowDetails>true</HistoryTreeShowDetails>
+    <HistoryWindowGeometry>183|134|1000|500|211</HistoryWindowGeometry>
+    <IconSize>large</IconSize>
+    <IconSizeMenus>small</IconSizeMenus>
+    <IconSizeSubToolBars>small</IconSizeSubToolBars>
+    <ImageSize>150</ImageSize>
+    <InlineEditorPermDefault>No Confirm|No Confirm|No Confirm</InlineEditorPermDefault>
+    <InlineEditorPermProduction>Confirm|Confirm|Confirm</InlineEditorPermProduction>
+    <InlineEditorPermTest>No Confirm|Confirm|Confirm</InlineEditorPermTest>
+    <KeymapName>$default$</KeymapName>
+    <LogAutoClear>true</LogAutoClear>
+    <LogFilterErrors>true</LogFilterErrors>
+    <LogFilterSuccess>true</LogFilterSuccess>
+    <LogFilterWarnings>true</LogFilterWarnings>
+    <LogShowMessage>true</LogShowMessage>
+    <LogShowSQL>false</LogShowSQL>
+    <LookAndFeel>com.sun.java.swing.plaf.windows.WindowsLookAndFeel</LookAndFeel>
+    <MainWindowProcedureEditorSplitterPos />
+    <MainWindowSQLEditorSplitterPos>247</MainWindowSQLEditorSplitterPos>
+    <MainWindowScriptsSplitterPos>301</MainWindowScriptsSplitterPos>
+    <MainWindowToolbarVisible>true</MainWindowToolbarVisible>
+    <MaxCharsTruncatesValue>TruncateValuesVisually</MaxCharsTruncatesValue>
+    <MemoryMonitorConfirmContinue>true</MemoryMonitorConfirmContinue>
+    <MonitorAutoAdjust>true</MonitorAutoAdjust>
+    <MonitorAutoStart>false</MonitorAutoStart>
+    <MonitorDefaultView />
+    <MonitorReloadSecs>300</MonitorReloadSecs>
+    <MonitorShowAtStartup>false</MonitorShowAtStartup>
+    <NavigatorGraphControlsVisible />
+    <NavigatorGraphNavModeEnabled />
+    <NewlineDelimiter>\n</NewlineDelimiter>
+    <NumberFormat>Unformatted</NumberFormat>
+    <ObjectActionsFormatSQL>true</ObjectActionsFormatSQL>
+    <ObjectActionsPreviewEnabled>false</ObjectActionsPreviewEnabled>
+    <ObjectViewTabsKeepAtDisconnect>false</ObjectViewTabsKeepAtDisconnect>
+    <ObjectViewTabsLabel>${connectionname} ${objectname}</ObjectViewTabsLabel>
+    <ObjectViewTabsObjectHeaderVisible>true</ObjectViewTabsObjectHeaderVisible>
+    <PendingTransactionsAction>Ask</PendingTransactionsAction>
+    <PlatformCompatibilityKey />
+    <PrettyAlignmentOnAs>true</PrettyAlignmentOnAs>
+    <PrettyAlignmentOnComma>false</PrettyAlignmentOnComma>
+    <PrettyAlignmentOnComment>false</PrettyAlignmentOnComment>
+    <PrettyAlignmentOnConcat>false</PrettyAlignmentOnConcat>
+    <PrettyAlignmentOnDeclaration>false</PrettyAlignmentOnDeclaration>
+    <PrettyAlignmentOnEqual>false</PrettyAlignmentOnEqual>
+    <PrettyAlignmentOnKeyword>false</PrettyAlignmentOnKeyword>
+    <PrettyAlignmentOnOperator>false</PrettyAlignmentOnOperator>
+    <PrettyBreakAfterAndOr>false</PrettyBreakAfterAndOr>
+    <PrettyBreakAfterComma>true</PrettyBreakAfterComma>
+    <PrettyBreakAfterConcat>false</PrettyBreakAfterConcat>
+    <PrettyBreakAfterSelectFromWhere>true</PrettyBreakAfterSelectFromWhere>
+    <PrettyBreakBeforeAndOr>true</PrettyBreakBeforeAndOr>
+    <PrettyBreakBeforeComma>false</PrettyBreakBeforeComma>
+    <PrettyBreakBeforeConcat>false</PrettyBreakBeforeConcat>
+    <PrettyBreakForBrackets>true</PrettyBreakForBrackets>
+    <PrettyBreakForCase>true</PrettyBreakForCase>
+    <PrettyBreakForJoin>true</PrettyBreakForJoin>
+    <PrettyDoubleIndentionForMainKeyword>false</PrettyDoubleIndentionForMainKeyword>
+    <PrettyIndentCondition>false</PrettyIndentCondition>
+    <PrettyIndention>4 spaces</PrettyIndention>
+    <PrettyKeywordCase>Keywords Uppercase</PrettyKeywordCase>
+    <PrettyLineWidth>100</PrettyLineWidth>
+    <PrettyNoEmptyLines>true</PrettyNoEmptyLines>
+    <PrettyNoWhitespace>true</PrettyNoWhitespace>
+    <PrettyQuoteChar>'</PrettyQuoteChar>
+    <PrettySourceSqlLanguage>Any SQL</PrettySourceSqlLanguage>
+    <PrettySpaceComma>Keep Unchanged</PrettySpaceComma>
+    <PrettySpaceOperator>Keep Unchanged</PrettySpaceOperator>
+    <PrettySpaceParent>Keep Unchanged</PrettySpaceParent>
+    <PrettySqlBetween>false</PrettySqlBetween>
+    <PrettySqlBetweenChar>"</PrettySqlBetweenChar>
+    <PrettyTargetSQL>SQL</PrettyTargetSQL>
+    <ProfileManagerSearchPath>${dbvis.prefsdir}/ext/profiles;${dbvis.home}/resources/profiles</ProfileManagerSearchPath>
+    <PropertiesFrameGeometry>237|84|891|600|24</PropertiesFrameGeometry>
+    <ProxyHost />
+    <ProxyPassword>rSk+E2+Snss=</ProxyPassword>
+    <ProxyPort />
+    <ProxyType>http</ProxyType>
+    <ProxyUseSettings>useSystem</ProxyUseSettings>
+    <ProxyUser />
+    <QBDefaultTableDragStyle>Solid</QBDefaultTableDragStyle>
+    <QBDefaultTableSize>200|150</QBDefaultTableSize>
+    <QBTableQuickAdd>200</QBTableQuickAdd>
+    <RecentSQLFiles />
+    <RecentSQLFilesLimit>20</RecentSQLFilesLimit>
+    <RowFormWindowGeometry />
+    <RunConnectAllAtStartup>false</RunConnectAllAtStartup>
+    <SQLAllowGo>true</SQLAllowGo>
+    <SQLBlockCommentBegin>/*</SQLBlockCommentBegin>
+    <SQLBlockCommentEnd>*/</SQLBlockCommentEnd>
+    <SQLCallableBegin>--/</SQLCallableBegin>
+    <SQLCallableEnd>/</SQLCallableEnd>
+    <SQLCommanderAskSave>true</SQLCommanderAskSave>
+    <SQLCommanderAskUnsavedEdits>true</SQLCommanderAskUnsavedEdits>
+    <SQLCommanderControlsVisible>false</SQLCommanderControlsVisible>
+    <SQLCommanderDisplayMode>Grid</SQLCommanderDisplayMode>
+    <SQLCommanderDropObjectAction>LaunchScriptor</SQLCommanderDropObjectAction>
+    <SQLCommanderPermDefault>Allow|Allow|Allow|Allow|Allow|Allow|Allow|Allow|Allow|Allow</SQLCommanderPermDefault>
+    <SQLCommanderPermProduction>Allow|Ask|Ask|Ask|Ask|Ask|Ask|Ask|Ask|Ask</SQLCommanderPermProduction>
+    <SQLCommanderPermTest>Allow|Allow|Allow|Allow|Ask|Allow|Allow|Ask|Allow|Ask</SQLCommanderPermTest>
+    <SQLCommanderProcessParameterMarkers>false</SQLCommanderProcessParameterMarkers>
+    <SQLCommanderProcessVariables>true</SQLCommanderProcessVariables>
+    <SQLCommanderResultSetsLabel>${index}: ${table} [${rows}]</SQLCommanderResultSetsLabel>
+    <SQLCommanderResultSetsPinNew>false</SQLCommanderResultSetsPinNew>
+    <SQLCommanderResultSetsReadOnly>false</SQLCommanderResultSetsReadOnly>
+    <SQLCommanderResultSetsRemoveEmpty>false</SQLCommanderResultSetsRemoveEmpty>
+    <SQLCommanderResultSetsShowSQL>true</SQLCommanderResultSetsShowSQL>
+    <SQLCommanderStickyNew>false</SQLCommanderStickyNew>
+    <SQLCommanderStopOnError>false</SQLCommanderStopOnError>
+    <SQLCommanderStopOnWarning>false</SQLCommanderStopOnWarning>
+    <SQLCommanderStripComments>true</SQLCommanderStripComments>
+    <SQLDelimiter1>;</SQLDelimiter1>
+    <SQLDelimiter2>;</SQLDelimiter2>
+    <SQLEditorBG>#ffffff</SQLEditorBG>
+    <SQLEditorCaretBlink>true</SQLEditorCaretBlink>
+    <SQLEditorExpandTab>true</SQLEditorExpandTab>
+    <SQLEditorFont>Consolas-plain-12</SQLEditorFont>
+    <SQLEditorLineHighlight>#ffffd7</SQLEditorLineHighlight>
+    <SQLEditorSelectionBG>#a0b3f0</SQLEditorSelectionBG>
+    <SQLEditorShowSpecialChars>false</SQLEditorShowSpecialChars>
+    <SQLEditorStatusbarVisible>true</SQLEditorStatusbarVisible>
+    <SQLEditorTabSize>8</SQLEditorTabSize>
+    <SQLEditorTabsLabel>${index}: ${filename}</SQLEditorTabsLabel>
+    <SQLEditorToolbarVisible>true</SQLEditorToolbarVisible>
+    <SQLHistoryIgnoreDuplicateEntries>true</SQLHistoryIgnoreDuplicateEntries>
+    <SQLHistoryIgnoreErrorEntries>false</SQLHistoryIgnoreErrorEntries>
+    <SQLHistoryIgnoreSQLRegex />
+    <SQLHistoryMaxFiles>300</SQLHistoryMaxFiles>
+    <SQLLineComment1>--</SQLLineComment1>
+    <SQLLineComment2>//</SQLLineComment2>
+    <SSHConnectionPassword>Clear at Disconnect</SSHConnectionPassword>
+    <SSHKeepAliveInterval>60</SSHKeepAliveInterval>
+    <SSHKnownHostsFile />
+    <SSHRequirePassword>true</SSHRequirePassword>
+    <SSHRequireUserid>false</SSHRequireUserid>
+    <ScriptorDelimitedIdentifiers>false</ScriptorDelimitedIdentifiers>
+    <ScriptorEditorInsertAt>LAST</ScriptorEditorInsertAt>
+    <ScriptorFormatSQL>false</ScriptorFormatSQL>
+    <ScriptorQualifyNames>false</ScriptorQualifyNames>
+    <ScriptorSQLBlockBegin>--/</ScriptorSQLBlockBegin>
+    <ScriptorSQLBlockEnd>/</ScriptorSQLBlockEnd>
+    <ScriptorStatementDelimiter>;</ScriptorStatementDelimiter>
+    <ScriptsTabToolbarVisible>true</ScriptsTabToolbarVisible>
+    <ScriptsTreeShowDetails>true</ScriptsTreeShowDetails>
+    <ShowBlobType>Size</ShowBlobType>
+    <ShowClobType>Size</ShowClobType>
+    <ShowDataFilter>false</ShowDataFilter>
+    <ShowDialogWhenChangePermissionMode>true</ShowDialogWhenChangePermissionMode>
+    <ShowDialogWhenCloseDynamicNodeTab>true</ShowDialogWhenCloseDynamicNodeTab>
+    <ShowDialogWhenCreateDatabase>true</ShowDialogWhenCreateDatabase>
+    <ShowDialogWhenDoubleClickInCellWithControlChars>true</ShowDialogWhenDoubleClickInCellWithControlChars>
+    <ShowDialogWhenDoubleClickInDatabasesTab>true</ShowDialogWhenDoubleClickInDatabasesTab>
+    <ShowNullAs>(null)</ShowNullAs>
+    <ShowPrimaryKeysForTables>true</ShowPrimaryKeysForTables>
+    <ShowReleaseNotes>true</ShowReleaseNotes>
+    <ShowRowsForTables>false</ShowRowsForTables>
+    <TabTitleBoldForSelected>false</TabTitleBoldForSelected>
+    <TimeFormat>HH:mm:ss</TimeFormat>
+    <TimeStampFormat>yyyy-MM-dd HH:mm:ss</TimeStampFormat>
+    <UseRelativePaths>false</UseRelativePaths>
+    <UserDetailsEmail />
+    <UserDetailsFirstName />
+    <UserDetailsLastName />
+    <UserDetailsRemember>true</UserDetailsRemember>
+    <VariableDelimiter>||</VariableDelimiter>
+    <VariableFormWindowGeometry />
+    <VariableIdentifierPrefix>${</VariableIdentifierPrefix>
+    <VariableIdentifierSuffix>}$</VariableIdentifierSuffix>
+    <Version>9.1.1</Version>
+    <WorkingDirectory>C:\Users\000287</WorkingDirectory>
+    <WorkspaceNewTabPosition>Last</WorkspaceNewTabPosition>
+    <WorkspaceSaveObjectViewTabsAtQuit>false</WorkspaceSaveObjectViewTabsAtQuit>
+    <WorkspaceSaveSQLCommanderTabsAtQuit>true</WorkspaceSaveSQLCommanderTabsAtQuit>
+  </General>
+  <ObjectViewSettings />
+  <Drivers>
+    <Driver>
+      <Name>Cache</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:Cache://&lt;server&gt;:&lt;port1972&gt;/&lt;namespace&gt;</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>DB2</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:db2://&lt;server&gt;:&lt;port50000&gt;/&lt;database&gt;</URLFormat>
+      <DefaultClass>com.ibm.db2.jcc.DB2Driver</DefaultClass>
+      <Locations>
+        <Location type="dynamic">
+          <Path>C:\Program Files\DbVisualizer\jdbc\db2\db2jcc4.jar</Path>
+          <Classes>
+            <Class type="jdbc">com.ibm.db2.jcc.DB2Driver</Class>
+          </Classes>
+        </Location>
+      </Locations>
+    </Driver>
+    <Driver>
+      <Name>DB2 (DataDirect)</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:datadirect:db2://&lt;server&gt;:&lt;port50000&gt;;DatabaseName=&lt;database&gt;</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>DB2 for AS/400 (JTOpen)</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:as400://&lt;server&gt;naming=sql;errors=full</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>Firebird</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:firebirdsql:&lt;server&gt;/&lt;port3050&gt;:&lt;database-file&gt;</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>FrontBase</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:FrontBase://&lt;server&gt;:&lt;port&gt;/&lt;database&gt;</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>HP Neoview</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:hpt4jdbc://&lt;system&gt;:&lt;port&gt;/:</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>HSQLDB server</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:hsqldb:hsql://&lt;server&gt;:&lt;port9001&gt;/&lt;database&gt;</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>HSQLDB embedded</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:hsqldb:&lt;database&gt;</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>H2 server</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:h2:tcp:&lt;server&gt;:&lt;port9092&gt;/&lt;database&gt;</URLFormat>
+      <DefaultClass>org.h2.Driver</DefaultClass>
+      <Locations>
+        <Location type="dynamic">
+          <Path>C:\Program Files\DbVisualizer\jdbc\h2\h2.jar</Path>
+          <Classes>
+            <Class type="jdbc">org.h2.Driver</Class>
+          </Classes>
+        </Location>
+      </Locations>
+    </Driver>
+    <Driver>
+      <Name>H2 embedded</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:h2:&lt;database&gt;</URLFormat>
+      <DefaultClass>org.h2.Driver</DefaultClass>
+      <Locations>
+        <Location type="dynamic">
+          <Path>C:\Program Files\DbVisualizer\jdbc\h2\h2.jar</Path>
+          <Classes>
+            <Class type="jdbc">org.h2.Driver</Class>
+          </Classes>
+        </Location>
+      </Locations>
+    </Driver>
+    <Driver>
+      <Name>Informix</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:informix-sqli://&lt;server&gt;:&lt;port1526&gt;/&lt;database&gt;:informixserver=&lt;dbservername&gt;</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>Informix (DataDirect)</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:datadirect:informix://&lt;server&gt;:&lt;port1526&gt;;InformixServer=&lt;informixserver&gt;;DatabaseName=&lt;database&gt;</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>JavaDB/Derby server</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:derby://&lt;server&gt;:&lt;port1527&gt;/&lt;databaseName&gt;</URLFormat>
+      <DefaultClass>org.apache.derby.jdbc.ClientDriver</DefaultClass>
+      <Locations>
+        <Location type="dynamic">
+          <Path>C:\Program Files\DbVisualizer\jdbc\derby\derby.jar</Path>
+        </Location>
+        <Location type="dynamic">
+          <Path>C:\Program Files\DbVisualizer\jdbc\derby\derbyclient.jar</Path>
+          <Classes>
+            <Class type="jdbc">org.apache.derby.jdbc.ClientDriver</Class>
+          </Classes>
+        </Location>
+        <Location type="dynamic">
+          <Path>C:\Program Files\DbVisualizer\jdbc\derby\derbynet.jar</Path>
+        </Location>
+      </Locations>
+    </Driver>
+    <Driver>
+      <Name>JavaDB/Derby embedded</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:derby:&lt;databaseName&gt;</URLFormat>
+      <DefaultClass>org.apache.derby.jdbc.EmbeddedDriver</DefaultClass>
+      <Locations>
+        <Location type="dynamic">
+          <Path>C:\Program Files\DbVisualizer\jdbc\derby\derby.jar</Path>
+          <Classes>
+            <Class type="jdbc">org.apache.derby.jdbc.EmbeddedDriver</Class>
+          </Classes>
+        </Location>
+        <Location type="dynamic">
+          <Path>C:\Program Files\DbVisualizer\jdbc\derby\derbyclient.jar</Path>
+        </Location>
+        <Location type="dynamic">
+          <Path>C:\Program Files\DbVisualizer\jdbc\derby\derbynet.jar</Path>
+        </Location>
+      </Locations>
+    </Driver>
+    <Driver>
+      <Name>JDataStore</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:borland:dslocal:&lt;file&gt;</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>JDBC/ODBC Bridge</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:odbc:&lt;datasource&gt;</URLFormat>
+      <DefaultClass>sun.jdbc.odbc.JdbcOdbcDriver</DefaultClass>
+      <Locations>
+        <Location type="system">
+          <Path>C:\Program Files\Java\jre7\lib\rt.jar</Path>
+          <Classes>
+            <Class type="jdbc">sun.jdbc.odbc.JdbcOdbcDriver</Class>
+          </Classes>
+        </Location>
+      </Locations>
+    </Driver>
+    <Driver>
+      <Name>MaxDB</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:sapdb://&lt;server&gt;:&lt;port7210&gt;/&lt;database&gt;</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>McKoi</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:mckoi://&lt;server&gt;:&lt;port9157&gt;/&lt;schema&gt;</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>Mimer</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:mimer:&lt;protocol&gt;://&lt;server&gt;:&lt;port1360&gt;/&lt;database&gt;</URLFormat>
+      <DefaultClass>com.mimer.jdbc.Driver</DefaultClass>
+      <Locations>
+        <Location type="dynamic">
+          <Path>C:\Program Files\DbVisualizer\jdbc\mimer\mimer.jar</Path>
+          <Classes>
+            <Class type="jdbc">com.mimer.jdbc.Driver</Class>
+          </Classes>
+        </Location>
+      </Locations>
+    </Driver>
+    <Driver>
+      <Name>MySQL</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:mysql://&lt;server&gt;:&lt;port3306&gt;/&lt;database&gt;</URLFormat>
+      <DefaultClass>com.mysql.jdbc.Driver</DefaultClass>
+      <Locations>
+        <Location type="dynamic">
+          <Path>C:\Program Files\DbVisualizer\jdbc\mysql\mysql.jar</Path>
+          <Classes>
+            <Class type="jdbc">com.mysql.jdbc.Driver</Class>
+          </Classes>
+        </Location>
+      </Locations>
+    </Driver>
+    <Driver>
+      <Name>Netezza</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:netezza://&lt;server&gt;:&lt;port5480&gt;/&lt;database&gt;</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>Oracle Thin</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:oracle:thin:@&lt;server&gt;:&lt;port1521&gt;:&lt;sid&gt;</URLFormat>
+      <DefaultClass>oracle.jdbc.OracleDriver</DefaultClass>
+      <Locations>
+        <Location type="dynamic">
+          <Path>C:\Program Files\DbVisualizer\jdbc\oracle\ojdbc6.jar</Path>
+          <Classes>
+            <Class type="jdbc">oracle.jdbc.OracleDriver</Class>
+          </Classes>
+        </Location>
+        <Location type="dynamic">
+          <Path>C:\Program Files\DbVisualizer\jdbc\oracle\orai18n.jar</Path>
+        </Location>
+        <Location type="dynamic">
+          <Path>C:\Program Files\DbVisualizer\jdbc\oracle\xdb.jar</Path>
+        </Location>
+        <Location type="dynamic">
+          <Path>C:\Program Files\DbVisualizer\jdbc\oracle\xmlparserv2.jar</Path>
+        </Location>
+      </Locations>
+    </Driver>
+    <Driver>
+      <Name>Oracle OCI</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:oracle:oci:@&lt;server&gt;:&lt;port1521&gt;:&lt;sid&gt;</URLFormat>
+      <DefaultClass>oracle.jdbc.OracleDriver</DefaultClass>
+      <Locations>
+        <Location type="dynamic">
+          <Path>C:\Program Files\DbVisualizer\jdbc\oracle\ojdbc6.jar</Path>
+          <Classes>
+            <Class type="jdbc">oracle.jdbc.OracleDriver</Class>
+          </Classes>
+        </Location>
+        <Location type="dynamic">
+          <Path>C:\Program Files\DbVisualizer\jdbc\oracle\orai18n.jar</Path>
+        </Location>
+        <Location type="dynamic">
+          <Path>C:\Program Files\DbVisualizer\jdbc\oracle\xdb.jar</Path>
+        </Location>
+        <Location type="dynamic">
+          <Path>C:\Program Files\DbVisualizer\jdbc\oracle\xmlparserv2.jar</Path>
+        </Location>
+      </Locations>
+    </Driver>
+    <Driver>
+      <Name>Oracle (DataDirect)</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:datadirect:oracle://&lt;server&gt;:&lt;port1521&gt;;ServiceName=&lt;servicename&gt;</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>Pervasive</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:pervasive://&lt;server&gt;:&lt;port&gt;/&lt;database&gt;</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>PostgreSQL</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:postgresql://&lt;server&gt;:&lt;port5432&gt;/&lt;database&gt;</URLFormat>
+      <DefaultClass>org.postgresql.Driver</DefaultClass>
+      <Locations>
+        <Location type="dynamic">
+          <Path>C:\Program Files\DbVisualizer\jdbc\postgresql\postgresql.jar</Path>
+          <Classes>
+            <Class type="jdbc">org.postgresql.Driver</Class>
+          </Classes>
+        </Location>
+      </Locations>
+    </Driver>
+    <Driver>
+      <Name>Progress (DataDirect)</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:datadirect:openedge://&lt;server&gt;:&lt;port2003&gt;;DatabaseName=&lt;database&gt;</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>SQLite</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:sqlite:&lt;database&gt;</URLFormat>
+      <DefaultClass>org.sqlite.JDBC</DefaultClass>
+      <Locations>
+        <Location type="dynamic">
+          <Path>C:\Program Files\DbVisualizer\jdbc\sqlite\sqlite.jar</Path>
+          <Classes>
+            <Class type="jdbc">org.sqlite.JDBC</Class>
+          </Classes>
+        </Location>
+      </Locations>
+    </Driver>
+    <Driver>
+      <Name>SQL Server (DataDirect)</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:datadirect:sqlserver://&lt;server&gt;:&lt;port1433&gt;;DatabaseName=&lt;database&gt;</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>SQL Server (jTDS)</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:jtds:sqlserver://&lt;server&gt;:&lt;port1433&gt;;DatabaseName=&lt;database&gt;</URLFormat>
+      <DefaultClass>net.sourceforge.jtds.jdbc.Driver</DefaultClass>
+      <LastName>jTDS Type 4 JDBC Driver for MS SQL Server and Sybase</LastName>
+      <LastVersion>1.2.7</LastVersion>
+      <Locations>
+        <Location type="dynamic">
+          <Path>C:\Program Files\DbVisualizer\jdbc\jtds\jtds.jar</Path>
+          <Classes>
+            <Class type="jdbc">net.sourceforge.jtds.jdbc.Driver</Class>
+          </Classes>
+        </Location>
+      </Locations>
+    </Driver>
+    <Driver>
+      <Name>SQL Server 2000 (Microsoft JDBC Driver)</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:microsoft:sqlserver://&lt;server&gt;:&lt;port1433&gt;;DatabaseName=&lt;database&gt;</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>SQL Server 2012 (Microsoft JDBC Driver)</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:sqlserver://&lt;server&gt;:&lt;port1433&gt;;DatabaseName=&lt;database&gt;</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>Sybase ASE (jTDS)</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:jtds:sybase://&lt;server&gt;:&lt;port5000&gt;;DatabaseName=&lt;database&gt;</URLFormat>
+      <DefaultClass>net.sourceforge.jtds.jdbc.Driver</DefaultClass>
+      <Locations>
+        <Location type="dynamic">
+          <Path>C:\Program Files\DbVisualizer\jdbc\jtds\jtds.jar</Path>
+          <Classes>
+            <Class type="jdbc">net.sourceforge.jtds.jdbc.Driver</Class>
+          </Classes>
+        </Location>
+      </Locations>
+    </Driver>
+    <Driver>
+      <Name>Sybase ASE (JConnect)</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:sybase:Tds:&lt;server&gt;:&lt;port5000&gt;/&lt;database&gt;</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>Sybase SQL Anywhere (JConnect)</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:sybase:Tds:&lt;server&gt;:&lt;port2638&gt;/&lt;database&gt;</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>Sybase (DataDirect)</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:datadirect:sybase://&lt;server&gt;:&lt;port2048&gt;;DatabaseName=&lt;databasename&gt;</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>MySQL (DataDirect)</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:datadirect:mysql://&lt;server&gt;:&lt;port3306&gt;</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>Salesforce (DataDirect)</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:datadirect:sforce://&lt;server&gt;</URLFormat>
+    </Driver>
+    <Driver>
+      <Name>Teradata Aster</Name>
+      <IsDefaultDriver>true</IsDefaultDriver>
+      <URLFormat>jdbc:ncluster://&lt;server&gt;:&lt;port2406&gt;/&lt;database&gt;</URLFormat>
+    </Driver>
+  </Drivers>
+  <Databases>
+    <Database id="2">
+      <Alias>FoodCORE_KNH</Alias>
+      <Url />
+      <Driver>SQL Server (jTDS)</Driver>
+      <Userid>sa</Userid>
+      <Profile>auto</Profile>
+      <Type>sqlserver</Type>
+      <Password>Nb2Jk4o7UwHEUCmasJuH6w==</Password>
+      <ServerInfoFormat>1</ServerInfoFormat>
+      <Properties>
+        <Property key="dbvis.ConnectionModeMigrated">true</Property>
+      </Properties>
+      <UrlFormat>0</UrlFormat>
+      <UrlVariables>
+        <Driver>
+          SQL Server (jTDS)
+          <UrlVariable UrlVariableName="Server">164.69.66.179</UrlVariable>
+          <UrlVariable UrlVariableName="Port">1433</UrlVariable>
+          <UrlVariable UrlVariableName="Database">FoodCORE_KNH</UrlVariable>
+        </Driver>
+      </UrlVariables>
+      <SshSettings>
+        <SshEnabled>false</SshEnabled>
+        <SshHost />
+        <SshPort>22</SshPort>
+        <SshUserid />
+        <SshPassword />
+        <SshPrivateKeyFile />
+        <SshPassphrase />
+      </SshSettings>
+    </Database>
+    <Database id="4">
+      <Alias>FoodCORE_L15</Alias>
+      <Url>jdbc:jtds:sqlserver://164.69.66.179:1433;DatabaseName=FoodCORE_KNH</Url>
+      <Driver>SQL Server (jTDS)</Driver>
+      <Userid>sa</Userid>
+      <Profile>auto</Profile>
+      <Type>sqlserver</Type>
+      <Password>Nb2Jk4o7UwHEUCmasJuH6w==</Password>
+      <ServerInfoFormat>1</ServerInfoFormat>
+      <Properties>
+        <Property key="dbvis.ConnectionModeMigrated">true</Property>
+      </Properties>
+      <UrlFormat>0</UrlFormat>
+      <UrlVariables>
+        <Driver>
+          SQL Server (jTDS)
+          <UrlVariable UrlVariableName="Server">164.69.66.179</UrlVariable>
+          <UrlVariable UrlVariableName="Port">1433</UrlVariable>
+          <UrlVariable UrlVariableName="Database">FoodCORE_L15</UrlVariable>
+        </Driver>
+      </UrlVariables>
+      <SshSettings>
+        <SshEnabled>false</SshEnabled>
+        <SshHost />
+        <SshPort>22</SshPort>
+        <SshUserid />
+        <SshPassword />
+        <SshPrivateKeyFile />
+        <SshPassphrase />
+      </SshSettings>
+    </Database>
+    <Database id="3">
+      <Alias>FoodCORE_ST</Alias>
+      <Url>jdbc:jtds:sqlserver://164.69.66.179:1433;DatabaseName=FoodCORE_KNH</Url>
+      <Driver>SQL Server (jTDS)</Driver>
+      <Userid>sa</Userid>
+      <Profile>auto</Profile>
+      <Type>sqlserver</Type>
+      <Password>Nb2Jk4o7UwHEUCmasJuH6w==</Password>
+      <ServerInfoFormat>1</ServerInfoFormat>
+      <Properties>
+        <Property key="dbvis.ConnectionModeMigrated">true</Property>
+      </Properties>
+      <UrlFormat>0</UrlFormat>
+      <UrlVariables>
+        <Driver>
+          SQL Server (jTDS)
+          <UrlVariable UrlVariableName="Server">164.69.68.227</UrlVariable>
+          <UrlVariable UrlVariableName="Port">1433</UrlVariable>
+          <UrlVariable UrlVariableName="Database">FoodCORE_ST</UrlVariable>
+        </Driver>
+      </UrlVariables>
+      <SshSettings>
+        <SshEnabled>false</SshEnabled>
+        <SshHost />
+        <SshPort>22</SshPort>
+        <SshUserid />
+        <SshPassword />
+        <SshPrivateKeyFile />
+        <SshPassphrase />
+      </SshSettings>
+    </Database>
+  </Databases>
+  <Objects>
+    <Database id="2" />
+    <Database id="4" />
+    <Database id="3" />
+  </Objects>
+</DbVisualizer>

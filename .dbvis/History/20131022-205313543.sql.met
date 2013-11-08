@@ -1,0 +1,15 @@
+#Extended file properties defined by DbVisualizer
+#Tue Oct 22 20:53:13 JST 2013
+last.execution_count=1
+last.elapsed_time=0.152
+exec.schema=
+file.comment=
+last.execution_time=1382442793528
+file.encoding=MS932
+last.database_type=SQL Server
+last.affected_row_count=2
+exec.catalog=FoodCORE_ST
+last.sql_preview=SELECT PARAM_NAME FROM M_BIZ_PARAM WHERE KAISHA_CD
+last.execution_error_count=0
+last.execution_success_count=1
+exec.connection=3

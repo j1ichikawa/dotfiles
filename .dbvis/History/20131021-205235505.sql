@@ -1,0 +1,1 @@
+sp_columns M_EDI_DEFAULT_PARAM

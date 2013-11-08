@@ -1,0 +1,10 @@
+SELECT
+        *
+FROM
+        M_BIZ_PARAM
+WHERE
+        SEGMENT = 'EDI'
+AND     PARAM_NAME IN (
+'1700000000',
+'AEON000001&
+)

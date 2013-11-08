@@ -1,0 +1,15 @@
+#Extended file properties defined by DbVisualizer
+#Tue Oct 29 15:26:34 JST 2013
+last.execution_count=1
+last.elapsed_time=0.250
+exec.schema=dbo
+file.comment=
+last.execution_time=1383027994811
+file.encoding=MS932
+last.database_type=SQL Server
+last.affected_row_count=0
+exec.catalog=FoodCORE_KNH
+last.sql_preview=SELECT * FROM KNH_PVF\u53D7\u6CE8\u6B8B WHERE \u5165\u529B\u65E5 \= '20131029'
+last.execution_error_count=0
+last.execution_success_count=1
+exec.connection=2
