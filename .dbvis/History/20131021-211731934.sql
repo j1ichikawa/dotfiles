@@ -1,4 +1,0 @@
-SELECT
-        *
-FROM
-        M_EDI_DEFAULT_PARAM
