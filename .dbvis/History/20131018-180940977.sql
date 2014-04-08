@@ -1,9 +1,0 @@
-SELECT
-        PARAM_NAME
-FROM
-        M_BIZ_PARAM
-WHERE
-        SEGMENT = 'EDI'
-GROUP BY
-        PRRAM_NAME
-

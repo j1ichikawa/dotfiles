@@ -1,8 +1,0 @@
---ignore-dir=tmp
---sort-files
---pager=less
---nogroup
---type-add=csharp=.cs
---type-add=ruby=.rake,rakefile,Rakefile,.builder
---type-add=coffee=.coffee
---type-set=tags=tags
