@@ -3,7 +3,7 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 07-Apr-2014.
+" Last Change: 11-Apr-2014.
 " Maintainer:  MURAOKA Taro <koron@tka.att.ne.jp>
 "
 " 解説:
@@ -342,6 +342,10 @@ let g:surround_71 = "_(\"\r\")" " 71 = G
 :set directory=~/vimfiles/tmp
 ":set directory=C:/Temp
 ":set directory=.
+
+" 「うん○」
+:set noundofile
+":set undodir=~/vimfiles/undo
 
 "-------------------------------------------------------------------------------
 :set noswapfile
