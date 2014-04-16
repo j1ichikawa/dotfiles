@@ -3,7 +3,7 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 11-Apr-2014.
+" Last Change: 16-Apr-2014.
 " Maintainer:  MURAOKA Taro <koron@tka.att.ne.jp>
 "
 " 解説:
@@ -413,6 +413,8 @@ NeoBundle 'altercation/vim-colors-solarized'
 
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'tomtom/tcomment_vim.git'
+NeoBundle 'osyo-manga/vim-over'
+NeoBundle 'syui/w-auto.vim'
 
 NeoBundle 'https://github.com/Shougo/neocomplcache.git'
 NeoBundle 'https://github.com/vim-scripts/Align.git'
