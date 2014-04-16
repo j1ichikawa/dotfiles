@@ -3,7 +3,7 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 11-Apr-2014.
+" Last Change: 21-May-2014.
 " Maintainer:  MURAOKA Taro <koron@tka.att.ne.jp>
 "
 " 解説:
@@ -406,6 +406,7 @@ call neobundle#rc(expand('~/vimfiles/bundle/'))
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'surround.vim'
 NeoBundle 'mileszs/ack.vim'
+NeoBundle 'rking/ag.vim'
 
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'itchyny/lightline.vim'
@@ -413,6 +414,8 @@ NeoBundle 'altercation/vim-colors-solarized'
 
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'tomtom/tcomment_vim.git'
+NeoBundle 'osyo-manga/vim-over'
+NeoBundle 'syui/w-auto.vim'
 
 NeoBundle 'https://github.com/Shougo/neocomplcache.git'
 NeoBundle 'https://github.com/vim-scripts/Align.git'
@@ -427,6 +430,9 @@ if neobundle#exists_not_installed_bundles()
   echomsg 'Please execute ":NeoBundleInstall" command.'
   "finish
 endif
+
+
+"nnoremap <Leader>o :OverCommandLine<CR>
 
 "------------------------------------------------------------
 " Unite settings
@@ -460,4 +466,5 @@ function! s:unite_my_settings()
   nmap <silent><buffer> <ESC><ESC> q
   imap <silent><buffer> <ESC><ESC> <ESC>q
 endfunction
+
 
