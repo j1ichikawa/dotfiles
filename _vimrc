@@ -3,7 +3,7 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 08-Oct-2013.
+" Last Change: 16-Apr-2014.
 " Maintainer:  MURAOKA Taro <koron@tka.att.ne.jp>
 "
 " 解説:
@@ -343,8 +343,12 @@ let g:surround_71 = "_(\"\r\")" " 71 = G
 ":set directory=C:/Temp
 ":set directory=.
 
+" 「うん○」
+:set noundofile
+":set undodir=~/vimfiles/undo
+
 "-------------------------------------------------------------------------------
-":set noswapfile
+:set noswapfile
 
 " vimdiff color
 hi DiffAdd    ctermfg=black ctermbg=2
@@ -373,4 +377,89 @@ inoremap <Leader>path <C-R>=expand('%:p')<CR>
 
 "-------------------------------------------------------------------------------
 "let g:previm_open_cmd
+
+"------------------------------------------------------------
+" Neobundle environment
+"------------------------------------------------------------
+if has('win32') || has('win64')
+  set shellslash
+  let $VIMDIR = expand('~/vimfiles')
+else
+  let $VIMDIR = expand('~/.vim')
+endif
+
+"------------------------------------------------------------
+" NeoBundle settings
+"------------------------------------------------------------
+" neobundle
+set nocompatible               " Be iMproved
+filetype off                   " Required!
+
+if has('vim_starting')
+  set runtimepath+=~/vimfiles/bundle/neobundle.vim/
+"  call neobundle#rc(expand('~/dotfiles/vimfiles/bundle/'))
+endif
+
+call neobundle#rc(expand('~/vimfiles/bundle/'))
+
+" インストールしたいプラグイン
+NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'surround.vim'
+NeoBundle 'mileszs/ack.vim'
+
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'altercation/vim-colors-solarized'
+
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'tomtom/tcomment_vim.git'
+NeoBundle 'osyo-manga/vim-over'
+NeoBundle 'syui/w-auto.vim'
+
+NeoBundle 'https://github.com/Shougo/neocomplcache.git'
+NeoBundle 'https://github.com/vim-scripts/Align.git'
+NeoBundle 'https://github.com/kien/ctrlp.vim.git'
+
+filetype plugin indent on     " Required!
+
+" Installation check.
+if neobundle#exists_not_installed_bundles()
+  echomsg 'Not installed bundles : ' .
+        \ string(neobundle#get_not_installed_bundle_names())
+  echomsg 'Please execute ":NeoBundleInstall" command.'
+  "finish
+endif
+
+"------------------------------------------------------------
+" Unite settings
+"------------------------------------------------------------
+""" Unite.vim
+" 起動時にインサートモードで開始
+let g:unite_enable_start_insert = 1
+" インサート／ノーマルどちらからでも呼び出せるようにキーマップ
+nnoremap <silent> <C-f> :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+inoremap <silent> <C-f> <ESC>:<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> <C-b> :<C-u>Unite buffer file_mru<CR>
+inoremap <silent> <C-b> <ESC>:<C-u>Unite buffer file_mru<CR>
+
+" バッファ一覧
+nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
+" ファイル一覧
+nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+" レジスタ一覧
+nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
+" 最近使用したファイル一覧
+nnoremap <silent> ,um :<C-u>Unite file_mru<CR>
+" 全部乗せ
+nnoremap <silent> ,ua :<C-u>UniteWithBufferDir -buffer-name=files buffer file_mru bookmark file<CR>
+
+" unite.vim上でのキーマッピング
+autocmd FileType unite call s:unite_my_settings()
+function! s:unite_my_settings()
+  " 単語単位からパス単位で削除するように変更
+  imap <buffer> <C-w> <Plug>(unite_delete_backward_path)
+  " ESCキーを2回押すと終了する
+  nmap <silent><buffer> <ESC><ESC> q
+  imap <silent><buffer> <ESC><ESC> <ESC>q
+endfunction
 

@@ -1,159 +1,3 @@
-ls -l
-echo $HOME
-ll
-ls
-ls -l
-cd ..
-cls
-exit
-ls -l
-ll
-ls -la
-pwd
-cd $PTDIR
-ls -l
-ps -ef
-ll
-echo $HOME
-source $HOME/.bashrc
-ll
-clear
-cls
-ls -l
-ll
-cd 
-ls -l
-ll
-ls
-ll
-clear
-ls
-cls
-ls -l
-ll
-pwd
-ls -la
-cls
-robocopy /?
-robocopy $STDIR/fam420_d/ $PTDIR/fam420_d/ /E /MT
-cls
-exit
-pwd
-cd /c/Work/Export_SAM500D1
-ls -l
-ll
-find . -type f
-find . -type f| xargs ls -la
-find . -type f| xargs ls -la>./export_files.txt
-gvim export_files.txt 
-copy ./qqoutput/form/control/js/sam500d1control_c_n.js $PTDIR/qqoutput/form/control/js/sam500d1control_c_n.js
-cp -p ./qqoutput/form/control/js/sam500d1control_c_n.js $PTDIR/qqoutput/form/control/js/sam500d1control_c_n.js
-gvim export_files.txt 
-gvim dep_files.cmd 
-cp -p ./qqoutput/form/control/js/sam500e1control_c_n.js $PTDIR/qqoutput/form/control/js/sam500e1control_c_n.js
-cp -p ./qqoutput/form/control/sam500_econtrol.xml $PTDIR/qqoutput/form/control/sam500_econtrol.xml
-ls -la $PTDIR
-cls
-gvim dep_files.cmd 
-exit
-source .bashrc
-cls
-ll
-rsvt
-pwd
-ls -l
-ll
-ls -la
-cd 
-cd Documents
-ls -l
-ll
-clear
-ls -la
-sgdm
-cls
-pwd
-/c/commands/
-ls -l /c/commands/
-ls -l /c/commands/get_dependency_files.cmd
-/c/commands/get_dependency_files.cmd
-cls
-ll
-ll
-pwd
-cd $PTDIR
-cls
-ls -l
-find App_Code/Seg100_d App_Code/Sam500_e -type f -name *.cs
-cls
-ls -la
-ls -tl
-rm -rf fkk100_e App_Code/Fkk100_e
-ls -tl
-rm -rf ser300_e App_Code/Ser300_e
-ls -tl
-rm -rf fkk120_e App_Code/Fkk120_e
-rm -rf fam330_d App_Code/Fam330_d
-ls -tl
-rm -rf fkh840_d App_Code/Fkh840_d
-ls -tl
-cls
-ls -tl
-rm -rf fam003_e App_Code/Fam003_e
-rm -rf edi001_d App_Code/Edi001_d
-cls
-ls -tl
-rm -rf fam650_e App_Code/Fam650_e
-ls -tl
-cls
-ls -tl
-rm -rf fes810_d App_Code/Fes810_d
-rm -rf seg530_d App_Code/Seg530_d
-ls -tl
-cls
-ls -tl
-env
-cd $PTDIR
-ls -l
-ls -la
-cd
-pwd
-cd Documents
-ls -l
-ll
-ls -l
-cd 
-source .bashrc
-cls
-ls -l
-pwd
-clear
-cls
-pwd
-cd /c/Work/Export_SAM500D1
-ls -l
-gvim dep_files.cmd &
-pwd
-ls -l
-ll
-ls -la
-clear
-cd ~
-ls -l
-ls -ll
-ls -la
-ll
-ls -l
-cls
-clear
-pwd
-ls -l
-ll
-cd $PTDIR
-ll
-ls -l
-cls
-pwd
 ps -ef
 clear
 ls -l
@@ -449,3 +293,208 @@ rm dirs.sh
 rm files.sh 
 cls
 Ack fbm001
+git clone
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/j1ichikawa/vimfiles.git
+git push -u origin mastergit remote add origin https://github.com/j1ichikawa/vimfiles.git
+git push -u origin master
+git init
+git commit -m "first commit"
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/j1ichikawa/vimfiles.git
+git push -u origin master
+git remote add origin https://github.com/j1ichikawa/vimfiles.git
+git push -u origin master
+https://github.com/j1ichikawa/vimfiles.git
+git@github.com:j1ichikawa/vimfiles.git
+exit
+cd Documents
+cd GitHub
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/j1ichikawa/dotfiles.git
+cls
+cd dotfiles
+touch README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/j1ichikawa/dotfiles.git
+git push -u origin mastergit remote add origin https://github.com/j1ichikawa/dotfiles.git
+git push -u origin master
+ls -tlar
+cd /c/Work/Export_FBM002_E
+ls -l
+clear
+ls -la
+pwd
+sh dep_files.sh
+sh dep_files.sh
+chmod +x *.sh
+ls -la
+pwd
+cd /c/Work/Export_FBM002_E
+ls -la
+chmod +x *.sh
+ls -la
+sh dep_files.sh
+sh dep_files.sh
+ls -la
+cd ~/vimfiles
+ls -l
+cd plugin
+ls -l
+gvim ctrlp.vim &
+cd ..
+clear
+ls -la
+mkdir bundle
+git clone git://github.com/Shougo/neobundle.vim ~/vimfiles/bundle/neobundle.vim
+which git
+perl -MCPAN -e "CPAN::Shell->install(CPAN::Shell->r)"
+clear
+cd /c/Work/Export_FBM002_E3
+clear
+ls -la
+gvim dep_files.cmd &
+clear
+cd $PTDIR
+cls
+clear
+Ack --help
+Ack -h
+which Ack
+pwd
+pushd /c/Work/Export_FBM002_E3
+ls -l
+gvim dep_files.cmd &
+. find . -type f
+pwd
+find . -type f 
+rm -rf ./App_Code/Qqoutput/Form/Codemap/FBM001E1ActionCodeInfoVO.cs
+find . -type f -name *001*
+rm -rf ./qqoutput/form/js/fbm001e1_c_n.js
+rm -rf ./qqoutput/form/pageinfo/fbm001_einfo.xml
+find . -type f -name *001*
+cls
+clear
+find . -type f -name *001*
+rm -rf ./App_GlobalResources/form/fbm001e1.aspx.ja-JP.resx
+ls -la
+gvim dep_files.cmd &
+gvim dep_files.cmd &
+find . -type f
+gvim dep_files.cmd &
+gvim dep_files.cmd &
+clear
+sgdm
+cls
+find . -type f 
+sgdm ./qqoutput/form/js/fbm002e1_c_n.js $PTDIR/qqoutput/form/js/fbm002e1_c_n.js
+cd /c/Work/Export_FBM002_E3
+ls -la
+gvim dep_files.cmd &
+cd $STDIR
+find . -type f -name "M_edi_biz_param_delVO.cs"
+cd /c/Work/Export_FBM002_E3
+ls -l
+clear
+ls -l
+gvim dep_files.cmd &
+cd $PTDIR
+cd $PTDIR
+ls -la
+clear
+ls -tlr
+rm -rf fam323_e App_Code/Fam323_e
+rm -rf fam323_e App_Code/Fam323_e
+clear
+ls -tlr
+cd /c/Work
+ls -l
+find FoodCOREPT -type f -name "fmb002*"
+find FoodCOREPT -type f -name "*[Ff]mb002*"
+sgdm
+/c/Tools/SpeedyFoxPortable/SpeedyFoxPortable.exe 
+/c/Tools/FirefoxPortable/FirefoxPortable.exe &
+clear
+which rsync
+rsync --version
+cd /c/Work/JB_Test/E0/EDIJUCHU
+ls -l
+ls -l
+ls -la
+ls -la
+ls -l
+cd ..
+ls -l
+cd EDISHUKA
+ls -l
+ls -la
+ls -la
+ls -la
+rm -rf *
+ls -la
+ls -la
+ls -la
+ls -la
+ls -la
+ls -la
+ll
+ls -l
+ll
+ll
+ll
+ll
+ll
+ll
+ll
+ll
+ll
+ll
+ll
+ll
+ll
+ll
+ll
+ll
+ls -l
+rm -rf *
+ll
+ll
+ll
+ll
+ll
+ll
+ll
+ll
+ll
+ll
+ls -l list*
+cd Documents
+ls -l list*
+cat list_creator_serial.txt 
+cd /c/commands
+ls -l
+today
+./today
+./today.cmd
+ls -l
+clear
+start .
+cd /c/Work
+clear
+cd /c/Work
+mkdir Export_FKH310_D
+cd Export_FKH310_D
+find . -type f
+cd ..
+ls -l
+ps -ef
+exit

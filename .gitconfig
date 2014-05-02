@@ -4,3 +4,5 @@
 [core]
 	autocrlf = true
 	excludesfile = C:\\Users\\000287\\Documents\\gitignore_global.txt
+[http]
+	proxy = http://164.71.3.30:8080
