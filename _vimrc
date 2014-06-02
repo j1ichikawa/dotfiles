@@ -3,7 +3,7 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 21-May-2014.
+" Last Change: 02-Jun-2014.
 " Maintainer:  MURAOKA Taro <koron@tka.att.ne.jp>
 "
 " 解説:
@@ -331,7 +331,8 @@ autocmd FileType *
 
 "-------------------------------------------------------------------------------
 " neocomplcache
-let g:neocomplcache_enable_at_startup = 0 " 有効化
+"let g:neocomplcache_enable_at_startup = 0 " 有効化
+let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
 
 " surround extend
 let g:surround_103 = "_('\r')"  " 103 = g
@@ -413,11 +414,13 @@ NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'altercation/vim-colors-solarized'
 
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neocomplcache'
+"NeoBundle 'https://github.com/Shougo/neocomplcache.git'
 NeoBundle 'tomtom/tcomment_vim.git'
 NeoBundle 'osyo-manga/vim-over'
 NeoBundle 'syui/w-auto.vim'
+NeoBundle 'rbtnn/rabbit-ui.vim'
 
-NeoBundle 'https://github.com/Shougo/neocomplcache.git'
 NeoBundle 'https://github.com/vim-scripts/Align.git'
 NeoBundle 'https://github.com/kien/ctrlp.vim.git'
 
@@ -467,4 +470,10 @@ function! s:unite_my_settings()
   imap <silent><buffer> <ESC><ESC> <ESC>q
 endfunction
 
+" rbtnn/rabbit-ui.vim
+function! s:edit_csv(path)
+  call writefile(map(rabbit_ui#gridview(map(readfile(a:path),'split(v:val,",",1)')), "join(v:val, ',')"), a:path)
+endfunction
+
+command! -nargs=1 EditCSV  :call <sid>edit_csv(<q-args>)
 
