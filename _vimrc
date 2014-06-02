@@ -3,7 +3,11 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
+<<<<<<< HEAD
 " Last Change: 02-Jun-2014.
+=======
+" Last Change: 16-Apr-2014.
+>>>>>>> fb50f4ca58e062e62560d7a1212d0b9bf9e6bdcb
 " Maintainer:  MURAOKA Taro <koron@tka.att.ne.jp>
 "
 " 解説:
@@ -419,7 +423,10 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'tomtom/tcomment_vim.git'
 NeoBundle 'osyo-manga/vim-over'
 NeoBundle 'syui/w-auto.vim'
+<<<<<<< HEAD
 NeoBundle 'rbtnn/rabbit-ui.vim'
+=======
+>>>>>>> fb50f4ca58e062e62560d7a1212d0b9bf9e6bdcb
 
 NeoBundle 'https://github.com/vim-scripts/Align.git'
 NeoBundle 'https://github.com/kien/ctrlp.vim.git'
