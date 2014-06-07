@@ -3,7 +3,11 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
+<<<<<<< HEAD
+" Last Change: 02-Jun-2014.
+=======
 " Last Change: 16-Apr-2014.
+>>>>>>> fb50f4ca58e062e62560d7a1212d0b9bf9e6bdcb
 " Maintainer:  MURAOKA Taro <koron@tka.att.ne.jp>
 "
 " 解説:
@@ -331,7 +335,8 @@ autocmd FileType *
 
 "-------------------------------------------------------------------------------
 " neocomplcache
-let g:neocomplcache_enable_at_startup = 0 " 有効化
+"let g:neocomplcache_enable_at_startup = 0 " 有効化
+let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
 
 " surround extend
 let g:surround_103 = "_('\r')"  " 103 = g
@@ -406,17 +411,23 @@ call neobundle#rc(expand('~/vimfiles/bundle/'))
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'surround.vim'
 NeoBundle 'mileszs/ack.vim'
+NeoBundle 'rking/ag.vim'
 
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'altercation/vim-colors-solarized'
 
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neocomplcache'
+"NeoBundle 'https://github.com/Shougo/neocomplcache.git'
 NeoBundle 'tomtom/tcomment_vim.git'
 NeoBundle 'osyo-manga/vim-over'
 NeoBundle 'syui/w-auto.vim'
+<<<<<<< HEAD
+NeoBundle 'rbtnn/rabbit-ui.vim'
+=======
+>>>>>>> fb50f4ca58e062e62560d7a1212d0b9bf9e6bdcb
 
-NeoBundle 'https://github.com/Shougo/neocomplcache.git'
 NeoBundle 'https://github.com/vim-scripts/Align.git'
 NeoBundle 'https://github.com/kien/ctrlp.vim.git'
 
@@ -429,6 +440,9 @@ if neobundle#exists_not_installed_bundles()
   echomsg 'Please execute ":NeoBundleInstall" command.'
   "finish
 endif
+
+
+"nnoremap <Leader>o :OverCommandLine<CR>
 
 "------------------------------------------------------------
 " Unite settings
@@ -462,4 +476,11 @@ function! s:unite_my_settings()
   nmap <silent><buffer> <ESC><ESC> q
   imap <silent><buffer> <ESC><ESC> <ESC>q
 endfunction
+
+" rbtnn/rabbit-ui.vim
+function! s:edit_csv(path)
+  call writefile(map(rabbit_ui#gridview(map(readfile(a:path),'split(v:val,",",1)')), "join(v:val, ',')"), a:path)
+endfunction
+
+command! -nargs=1 EditCSV  :call <sid>edit_csv(<q-args>)
 
