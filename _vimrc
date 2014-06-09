@@ -425,6 +425,7 @@ NeoBundle 'tomtom/tcomment_vim.git'
 NeoBundle 'osyo-manga/vim-over'
 NeoBundle 'syui/w-auto.vim'
 NeoBundle 'rbtnn/rabbit-ui.vim'
+NeoBundle 'tomtom/tcomment_vim'
 
 NeoBundle 'https://github.com/vim-scripts/Align.git'
 NeoBundle 'https://github.com/kien/ctrlp.vim.git'
