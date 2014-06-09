@@ -3,11 +3,7 @@
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-<<<<<<< HEAD
-" Last Change: 02-Jun-2014.
-=======
-" Last Change: 16-Apr-2014.
->>>>>>> fb50f4ca58e062e62560d7a1212d0b9bf9e6bdcb
+" Last Change: 10-Jun-2014.
 " Maintainer:  MURAOKA Taro <koron@tka.att.ne.jp>
 "
 " 解説:
@@ -251,6 +247,11 @@ set showcmd
 set title
 " 画面を黒地に白にする (次行の先頭の " を削除すれば有効になる)
 "colorscheme evening " (Windows用gvim使用時はgvimrcを編集すること)
+colorscheme solarized " (Windows用gvim使用時はgvimrcを編集すること)
+
+syntax enable
+set background=dark "(dark / light)
+call togglebg#map('<F5>')
 
 "---------------------------------------------------------------------------
 " ファイル操作に関する設定:
@@ -423,10 +424,7 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'tomtom/tcomment_vim.git'
 NeoBundle 'osyo-manga/vim-over'
 NeoBundle 'syui/w-auto.vim'
-<<<<<<< HEAD
 NeoBundle 'rbtnn/rabbit-ui.vim'
-=======
->>>>>>> fb50f4ca58e062e62560d7a1212d0b9bf9e6bdcb
 
 NeoBundle 'https://github.com/vim-scripts/Align.git'
 NeoBundle 'https://github.com/kien/ctrlp.vim.git'
@@ -443,6 +441,13 @@ endif
 
 
 "nnoremap <Leader>o :OverCommandLine<CR>
+
+"------------------------------------------------------------
+" 括弧補完
+"------------------------------------------------------------
+inoremap {<Enter> {}<Left><CR><ESC><S-o>
+inoremap [<Enter> []<Left><CR><ESC><S-o>
+inoremap (<Enter> ()<Left><CR><ESC><S-o>
 
 "------------------------------------------------------------
 " Unite settings
