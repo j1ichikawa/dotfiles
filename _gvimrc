@@ -4,7 +4,7 @@ scriptencoding utf-8
 " An example for a Japanese version gvimrc file.
 " 日本語版のデフォルトGUI設定ファイル(gvimrc) - Vim7用試作
 "
-" Last Change: 10-Jun-2014.
+" Last Change: 17-Jun-2014.
 " Maintainer:  MURAOKA Taro <koron.kaoriya@gmail.com>
 "
 " 解説:
@@ -100,9 +100,9 @@ set cmdheight=2
 colorscheme koehler " (GUI使用時)
 "colorscheme wombat " (GUI使用時)
 
-set background=dark
-colorscheme solarized
-call togglebg#map("<F5>")
+"set background=dark
+"colorscheme solarized
+"call togglebg#map("<F5>")
 
 "---------------------------------------------------------------------------
 " 日本語入力に関する設定:
