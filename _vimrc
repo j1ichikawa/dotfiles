@@ -4,7 +4,7 @@ scriptencoding utf-8
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 10-Jun-2014.
+" Last Change: 25-Jun-2014.
 " Maintainer:  MURAOKA Taro <koron@tka.att.ne.jp>
 "
 " 解説:
@@ -424,26 +424,60 @@ call neobundle#rc(expand('~/vimfiles/bundle/'))
 
 " インストールしたいプラグイン
 NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'surround.vim'
-NeoBundle 'mileszs/ack.vim'
-NeoBundle 'rking/ag.vim'
-
-NeoBundle 'thinca/vim-quickrun'
-"NeoBundle 'https://github.com/thinca/vim-quickrun.git'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'altercation/vim-colors-solarized'
-"NeoBundle 'https://github.com/altercation/vim-colors-solarized.git'
-
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplcache'
 "NeoBundle 'https://github.com/Shougo/neocomplcache.git'
+"NeoBundle 'Shougo/vimproc', {
+"  \ 'build' : {
+"    \ 'windows' : 'make -f make_mingw32.mak',
+"    \ 'cygwin' : 'make -f make_cygwin.mak',
+"    \ 'mac' : 'make -f make_mac.mak',
+"    \ 'unix' : 'make -f make_unix.mak',
+"  \ },
+"\ }
+
+NeoBundle 'surround.vim'
+
+let vimproc_updcmd = has('win64') ?
+      \ 'tools\\update-dll-mingw 64' : 'tools\\update-dll-mingw 32'
+execute "NeoBundle 'Shougo/vimproc.vim'," . string({
+      \ 'build' : {
+      \     'windows' : vimproc_updcmd,
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ })
+
+NeoBundle 'thinca/vim-quickrun'
+"NeoBundle 'https://github.com/thinca/vim-quickrun.git'
+
+NeoBundle 'mileszs/ack.vim'
+NeoBundle 'rking/ag.vim'
+
+NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'altercation/vim-colors-solarized'
+"NeoBundle 'https://github.com/altercation/vim-colors-solarized.git'
+NeoBundle 'tomasr/molokai'
+NeoBundle 'nanotech/jellybeans.vim'
+
+"NeoBundle 'yuratomo/w3m.vim'
+"NeoBundle 'https://github.com/yuratomo/w3m.vim.git'
+
 NeoBundle 'tomtom/tcomment_vim.git'
 NeoBundle 'osyo-manga/vim-over'
 NeoBundle 'syui/w-auto.vim'
 NeoBundle 'rbtnn/rabbit-ui.vim'
 
+NeoBundle 'lukaszkorecki/workflowish'
+
+"NeoBundle 'vim-scripts/Align'
 NeoBundle 'https://github.com/vim-scripts/Align.git'
+"NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'https://github.com/kien/ctrlp.vim.git'
+
+" 行末の半角スペースを可視化
+NeoBundle 'bronson/vim-trailing-whitespace'
 
 filetype plugin indent on     " Required!
 
@@ -455,6 +489,7 @@ if neobundle#exists_not_installed_bundles()
   "finish
 endif
 
+"let g:w3m#command = 'C:\w3m.exe'
 
 "nnoremap <Leader>o :OverCommandLine<CR>
 
