@@ -4,7 +4,7 @@ scriptencoding utf-8
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 25-Jun-2014.
+" Last Change: 28-Jun-2014.
 " Maintainer:  MURAOKA Taro <koron@tka.att.ne.jp>
 "
 " 解説:
@@ -475,6 +475,8 @@ NeoBundle 'lukaszkorecki/workflowish'
 NeoBundle 'https://github.com/vim-scripts/Align.git'
 "NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'https://github.com/kien/ctrlp.vim.git'
+
+NeoBundle 'ap/vim-css-color'
 
 " 行末の半角スペースを可視化
 NeoBundle 'bronson/vim-trailing-whitespace'
