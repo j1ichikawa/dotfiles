@@ -1,7 +1,0 @@
-<UserSettings>
-    <ApplicationIdentity version="10.0"/>
-    <Category name="Source Control_TeamFoundation" Category="{2A718788-A6D9-44C5-90EF-438BF5B06A74}" Package="{4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}" RegisteredName="Source Control_TeamFoundation" PackageName="Microsoft.VisualStudio.TeamFoundation.VersionControl.HatPackage, Microsoft.VisualStudio.TeamFoundation.VersionControl, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-        <PropertyValue name="UserTool1" extension=".*" operation="Compare" command="C:\Program Files (x86)\SourceGear\DiffMerge\DiffMerge.exe" arguments="/title1=%6 /title2=%7 %1 %2"/>
-        <PropertyValue name="UserTool2" extension=".*" operation="Merge" command="C:\Program Files (x86)\SourceGear\DiffMerge\DiffMerge.exe" arguments="/title1=%6 /title2=%8 /title3=%7 /result=%4 %1 %3 %2"/>
-    </Category>
-</UserSettings>
