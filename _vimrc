@@ -416,11 +416,11 @@ set nocompatible               " Be iMproved
 filetype off                   " Required!
 
 if has('vim_starting')
-  set runtimepath+=~/vimfiles/bundle/neobundle.vim/
-"  call neobundle#rc(expand('~/dotfiles/vimfiles/bundle/'))
+  set runtimepath+=~/_vimfiles/bundle/neobundle.vim/
+"  call neobundle#rc(expand('~/dotfiles/_vimfiles/bundle/'))
 endif
 
-call neobundle#rc(expand('~/vimfiles/bundle/'))
+call neobundle#rc(expand('~/_vimfiles/bundle/'))
 
 " インストールしたいプラグイン
 NeoBundle 'Shougo/neobundle.vim'
