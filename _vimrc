@@ -4,7 +4,7 @@ scriptencoding utf-8
 " An example for a Japanese version vimrc file.
 " 日本語版のデフォルト設定ファイル(vimrc) - Vim7用試作
 "
-" Last Change: 28-Jun-2014.
+" Last Change: 01-Dec-2014.
 " Maintainer:  MURAOKA Taro <koron@tka.att.ne.jp>
 "
 " 解説:
@@ -416,11 +416,13 @@ set nocompatible               " Be iMproved
 filetype off                   " Required!
 
 if has('vim_starting')
-  set runtimepath+=~/_vimfiles/bundle/neobundle.vim/
-"  call neobundle#rc(expand('~/dotfiles/_vimfiles/bundle/'))
+  set runtimepath+=~/vimfiles/bundle/neobundle.vim
+"  call neobundle#rc(expand('~/dotfiles/vimfiles/bundle/'))
+"call neobundle#rc(expand('~/vimfiles/bundle/'))
+call neobundle#begin(expand('~/vimfiles/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
+call neobundle#end()
 endif
-
-call neobundle#rc(expand('~/_vimfiles/bundle/'))
 
 " インストールしたいプラグイン
 NeoBundle 'Shougo/neobundle.vim'
