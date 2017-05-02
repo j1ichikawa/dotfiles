@@ -544,3 +544,6 @@ endfunction
 
 command! -nargs=1 EditCSV  :call <sid>edit_csv(<q-args>)
 
+vunmap <C-X>
+vnoremap <c-a> <c-a>gv
+vnoremap <c-x> <c-x>gv
